@@ -2,6 +2,7 @@
 title: トップ
 layout: default
 ---
+# 電研ブログ
 
 <ul>
   {% for post in site.posts limit:10 %}
