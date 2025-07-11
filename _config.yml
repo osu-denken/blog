@@ -1,0 +1,7 @@
+title: 電研ブログ
+theme: minima
+baseurl: "/blog"
+markdown: kramdown
+commonmark:
+  options: ["UNSAFE", "SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
