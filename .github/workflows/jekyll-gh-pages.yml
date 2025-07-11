@@ -26,7 +26,6 @@ jobs:
       - name: Build with Jekyll
         uses: osu-denken/denken-jekyll@main
         with:
-          ruby_version: false
           ref: main
 
   deploy:
