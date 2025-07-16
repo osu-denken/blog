@@ -2,8 +2,6 @@
 title: トップ
 layout: default
 ---
-# 電研ブログ
-
 <ul class="cardlist">
   {% for post in site.posts limit:10 %}
     <li class="carditem">
