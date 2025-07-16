@@ -1,9 +1,9 @@
-## 入部フォーム
-※以下のフォームへアクセスするには、大阪産業大学から付与されているGoogleアカウントでアクセスしてください。
-- [OSU電研入部フォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
+## [入部フォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
+- [OSU電研入部フォーム - Googleフォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
 
-「返信に表示するメールアドレスとして (ユーザー名)@ge.osaka-sandai.ac.jp を記録する」のチェックボックスにチェックを入れて「送信」ボタンをクリックすることで送信できます。
+※上記のリンクは大学のGoogleアカウントでアクセスしてください。
 
+「返信に表示するメールアドレスとして (ユーザー名)@ge.osaka-sandai.ac.jp を記録する」のチェックボックスにチェックを入れて「送信」ボタンをクリックすることで送信できます。<br />
 こちら（電子計算研究部）にて確認でき次第、電子メールにて返答します。
 
 ### アクセス権が必要です と表示された場合
@@ -15,5 +15,5 @@
 
 ![OSU電研入部フォーム](./images/join_20250716-2.png)
 
-## X (旧Twitter)
-- [@OSU_denken](https://x.com/osu_denken)
+## [X (旧Twitter)](https://x.com/osu_denken)
+- [@OSU_denken - X](https://x.com/osu_denken)
