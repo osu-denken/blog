@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 ## [入部フォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
 - [OSU電研入部フォーム - Googleフォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
+=======
+---
+title: 入部について
+layout: default
+---
+
+## 入部フォーム
+※以下のフォームへアクセスするには、大阪産業大学から付与されているGoogleアカウントでアクセスしてください。
+- [OSU電研入部フォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
+>>>>>>> cec68a28487d930dcbb9a54327269deb28e57c41
 
 ※上記のリンクは大学のGoogleアカウントでアクセスしてください。
 

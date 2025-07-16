@@ -2,7 +2,7 @@
 title: "電研のブログサイトを公開しました"
 date: 2025-07-11
 categories: []
-tags: []
+tags: [ウェブ]
 layout: default
 ---
 大産大で活動している電子計算研究部のブログを開設しました。<br />
