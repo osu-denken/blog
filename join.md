@@ -1,3 +1,8 @@
+---
+title: 入部について
+layout: default
+---
+
 ## [入部フォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
 - [OSU電研入部フォーム - Googleフォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
 
