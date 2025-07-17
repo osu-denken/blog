@@ -4,9 +4,10 @@ layout: default
 ---
 
 ## [入部フォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
+※入部フォームは大学のGoogleアカウントでアクセスしてください。
 - [OSU電研入部フォーム - Googleフォーム](https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform)
 
-※上記のリンクは大学のGoogleアカウントでアクセスしてください。
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform?embedded=true" width="640" height="382" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
 
 「返信に表示するメールアドレスとして (ユーザー名)@ge.osaka-sandai.ac.jp を記録する」のチェックボックスにチェックを入れて「送信」ボタンをクリックすることで送信できます。<br />
 こちら（電子計算研究部）にて確認でき次第、電子メールにて返答します。
