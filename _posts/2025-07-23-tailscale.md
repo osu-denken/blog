@@ -14,6 +14,6 @@ TailscaleはWireGuardプロトコルを用いたメッシュVPNで、LANの範�
 1. tailscale.com を開き、右上の「Download」からインストールします。アカウントを持っていない場合は「Get started - it's free!」から作成します。
 2. インストールしたTailscaleを開いて「Sign in to your network」からネットワークに入ります。
 
-![Tailscaleサインイン画面](./images/2025-07-23-152853.png)
+![Tailscaleサインイン画面](https://osu-denken.github.io/blog/images/2025-07-23-152853.png)
 
 これだけでメッシュVPNを構築できるので初心者でも簡単に扱えそうですね！
