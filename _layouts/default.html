@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "ja" }}">
 
   {%- include head.html -%}
 
@@ -7,12 +7,17 @@
     
     {% include navbar.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
-      </div>
-    </main>
+  <div class="main">
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          <h1>{{ page.title }}</h1>
+          {{ content }}
+        </div>
+      </main>
+      <aside class="rightbar">
+        {% include toc.html html=content %}
+      </aside>
+    </div>
 
     {%- include footer.html -%}
 
