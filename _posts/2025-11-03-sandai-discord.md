@@ -1,8 +1,8 @@
 ---
-title: "Discordの大阪産業大学 Student Hubと電子計算研究部サーバーへの入り方"
+title: "大産大のStudent Hubと電研のDiscordサーバーへの入り方"
 date: 2025-11-03
 categories: []
-tags: [Discord]
+tags: [Discord, マニュアル]
 layout: default
 ---
 
