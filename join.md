@@ -4,6 +4,8 @@ layout: default
 ---
 
 ## 入部の手続き
+以下のいずれかの方法で入部申請または部活見学を行ってください。入部届はその際にお渡ししますので、記入後、ご提出ください。
+
 ### 入部フォームから送信する
 新入生歓迎会を逃した場合、入ってみたい方は以下のフォームから入部申請をしてください。入部フォームには大学のGoogleアカウントでアクセスしてください。
 {% include card.html url="https://docs.google.com/forms/d/e/1FAIpQLSc5PLg3PhXZa6Z3YCt9aXJVv_rmWcJHTMFbwovR8RTdJQ61fw/viewform" title="OSU電研入部フォーム" description="大学から付与されているGoogleアカウントでログインして送信します。" %}
@@ -13,7 +15,7 @@ layout: default
 
 ### 部活見学会に参加する
 毎年、新入生歓迎会に続いて、部活見学会を4月の中旬頃に開催しています。<br>
-基本的には開催前にX (旧Twitter) やブログにて実施する日時を発します。
+基本的には開催前にX (旧Twitter) やブログにて実施する日時をお知らせします。
 
 ### X (旧Twitter) のDMで連絡する
 - [@OSU_denken - X](https://x.com/osu_denken)
@@ -21,7 +23,7 @@ layout: default
 上記のリンクから電子計算研究部のXプロフィールを開き、ダイレクトメッセージからご連絡ください。
 
 ## FAQ
-- FAQは[こちら](https://osu-denken.github.io/blog/faq)
+- よくある質問は[FAQページ](https://osu-denken.github.io/blog/faq)をご覧ください。
 
 ----
 
