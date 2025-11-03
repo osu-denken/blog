@@ -52,6 +52,9 @@ layout: default
 ### Q. GitHubアカウントはどれですか？
 - A. [https://github.com/osu-denken](https://github.com/osu-denken)です。
 
+### Q. Discordサーバーに参加するには？
+A. [大産大のStudent Hubと電研のDiscordサーバーへの入り方](https://osu-denken.github.io/blog/2025/11/03/sandai-discord.html) をご覧ください。
+
 ## 設備について
 
 ### Q. 部室PCにはどのOSがインストールされていますか？
