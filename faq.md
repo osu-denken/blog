@@ -1,8 +1,9 @@
 ---
-title: 
+title: FAQ
 layout: default
 ---
-## FAQ
+
+## 活動について
 
 ### Q. 活動日はいつですか？
 - A. 基本的には水曜日の放課後（18:00頃〜）に部室で部会を開いています。自由参加なので、講義やバイトなどの都合に合わせてOK！コマが開いた隙間時間に部室を利用することも可能です！
@@ -40,6 +41,8 @@ layout: default
 ### Q. 退部したい場合はどうすればいいですか？
 - A. 部長またはメールなどで連絡してください。前例がないため、形式は特に決まっていません。
 
+## SNSについて
+
 ### Q. X (旧Twitter) アカウントはどれですか？
 - A. [@OSU_denken - X](https://x.com/OSU_denken)です。
 
@@ -48,6 +51,8 @@ layout: default
 
 ### Q. GitHubアカウントはどれですか？
 - A. [https://github.com/osu-denken](https://github.com/osu-denken)です。
+
+## 設備について
 
 ### Q. 部室PCにはどのOSがインストールされていますか？
 - A. ほとんどはWindows 11ですが、一部のPCにはUbuntuも入ってます。
