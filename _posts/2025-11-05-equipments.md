@@ -9,6 +9,8 @@ layout: default
 何があるのかを一度再確認して把握するため、部室に置いてある機器、ケーブルなどを一覧としてまとめました。
 ここではそれぞれいくつあるのかも記載しておくといいでしょう。
 
+11/5時点での情報です。
+
 ## コンピュータ類
 ### デスクトップ 1
 - CPU: [Intel Core i5 12600K](https://www.intel.co.jp/content/www/jp/ja/products/sku/134589/intel-core-i512600k-processor-20m-cache-up-to-4-90-ghz/specifications.html) (3.7GHz, 10コア16スレッド, L1Cache-864KB L2Cache-9.5MB L3Cache-20MB)
