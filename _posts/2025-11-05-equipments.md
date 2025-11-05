@@ -53,9 +53,18 @@ layout: default
 - 表示色: 1,677万色
 - 種類: 23.8型AH-IPSパネル (非光沢LED)
 - スピーカ: なし
-- 音声入出: ステレオミニジャック
+- 音声入出: ステレオミニジャック、マイク
 
-### LG-2
+### FLATRON E2742V-BN (LG)
+{% include card.html url="https://www.lg.com/jp/monitors/fhd-qhd/e2742v-bn/" title="27inch ワイド液晶モニター - E2742V-BN | LG JP" description="LGについて理解する E2742V-BN. LG の写真、レビュー、技術仕様書をクリックしてください 27inch ワイド液晶モニター." %}
+
+- 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
+- 電源コネクタ: DC電源ケーブル (IEC 60320 C13)
+- 解像度: 1920x1080
+- 表示色: 1,677万色
+- 種類: 27型TNパネル (非光沢LED)
+- スピーカ: なし
+- 音声入出: ステレオミニジャック、マイク
 
 ### VX207NE (ASUS)
 {% include card.html url="https://www.asus.com/jp/displays-desktops/monitors/eye-care/vx207ne/" title="VX207NE｜モニター｜ASUS 日本" description="ASUSのEye Careモニタは、TÜVRheinlandの低青色発光とちらつきのない認証を最も多く受けています。" %}
@@ -68,11 +77,36 @@ layout: default
 - スピーカ: なし
 - 音声入出: なし
 
-### iiyama
+### ProLite GE2488HS (iiyama)
+{% include card.html url="https://www.mouse-jp.co.jp/iiyama/support/download/manual/lcd/GE2488HS-usermanual-j.pdf?msockid=1602dc13a9b56bbb338bca92a8356ae9" title="GE2488HS-usermanual-j.pdf" description="取扱説明書" %}
 
-### VAIO
+- 映像コネクタ: DVIケーブル, VGAケーブル
+- 電源コネクタ: AC電源ケーブル
+- 解像度: 1920x1080
+- 表示色: 1,677万色
+- 種類: 24型TNパネル (非光沢LCD)
+- スピーカ: ステレオ
+- 音声入出: ステレオミニジャック (イヤホン, マイク)
+
+### PCVD-17SA1 (VAIO)
+{% include card.html url="https://contents.sony.jp/support/vaio/download/man/4679244011.pdf" title="PCVD-17SA1" description="取扱説明書" %}
+
 - 映像コネクタ: VGA
+- 電源コネクタ: DC電源ケーブル
+- 解像度: 1280×1024
+- 表示色: 1619万色
+- 種類: 17型TFTパネル (非光沢LCD)
+- スピーカ: なし
+- 音声入出: なし
 
-### AQUOS (TV)
+### AQUOS テレビ (SHARP)
+{% include card.html url="https://jp.sharp/support/aquos/product/lc22k9.html" title="機種別サポート情報（LC-22K9）｜液晶テレビ（AQUOS）｜サポート・お問い合わせ：シャープ" description="ホームサポート・お問い合わせ液晶テレビ（AQUOS）機種別サポート情報LC-22K9" %}
 
+- 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル, RCAケーブル
+- その他コネクタ: LANケーブル, USBケーブル
+- 解像度: 1366×768
+- 表示色: 1,677万色
+- 種類: 22型IPSパネル (非光沢LED)
+- スピーカ: ステレオ
+- 音声入出: ステレオミニジャック (イヤホン)
 
