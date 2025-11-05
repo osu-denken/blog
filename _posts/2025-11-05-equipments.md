@@ -17,10 +17,13 @@ layout: default
 - マザーボード: [ASUS ROG STRIX Z690-F GAMING WIFI](https://rog.asus.com/jp/motherboards/rog-strix/rog-strix-z690-f-gaming-wifi-model/)
 - グラフィックス: [MSI NVIDIA GeForce RTX 4060](https://jp.msi.com/Graphics-Card/GeForce-RTX-4060-GAMING-X-8G) (GPU 3072コア 2490MHz, VRAM 8GB GDDR6 8500MHz, )
 - 無線NIC: Intel Wi-Fi 6E AX210 160MHz
+- OS: Windows 11 Pro
 
 イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
 
-### 小型コンピュータ
+### Raspberry Pi 4 Model B x2
+手のひらサイズの小型コンピュータです。LinuxであるDebianベースのRaspberry OSがインストールされています。
+大学祭の展示でScratchを用いたプログラミング体験に使いました。
 
 ### サーバ x3
 - Dell PowerEdge R630 x3<br>
@@ -33,7 +36,6 @@ layout: default
 ### USBケーブル
 ほとんどのデバイスに使われている充電かつデータ転送用のケーブルです。
 
-
 ### Lightningケーブル
 従来のiPhoneに使われていたケーブルです。
 
@@ -41,7 +43,7 @@ layout: default
 映像用のケーブルです。多くの場合、このHDMIが使われます。
 
 ### VGAケーブル
-映像用のケーブルです。
+映像用のケーブルです。古めのコンピュータに使われていたものです。
 
 ### DVIケーブル
 映像用のケーブルです。
@@ -49,9 +51,8 @@ layout: default
 ### DPケーブル
 映像用のケーブルです。
 
-
 ### RCAケーブル/AVケーブル
-映像用のケーブルです。
+映像用のケーブルです。古めのゲーム機などに使われていたものです。
 
 ## ネットワーク類
 ### L2スイッチ（ルータ）
@@ -72,8 +73,17 @@ LANコネクタ（RJ-45コネクタ）がそこそこあるためスイッチと
 ### キーボード
 
 ### HDMI入力切替
+HDMI接続の映像出力先のモニタをボタンで切り替えることができる機器です。
 
+### スピーカー
+ステレオミニジャックで音声入力します。
 
+### Webカメラ
+部会をするGoogle Meetに使われています。
+マイクが内蔵されています。
+
+### プリンター
+EPSON製のプリンターです。
 
 ## ディスプレイ x7
 ### KH275V (I-O DATA)
