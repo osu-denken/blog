@@ -44,7 +44,16 @@ layout: default
 - 電圧: AC100V
 - 消費電力: 通常16.7W 最大34W
 
-### LG-1
+### FLATRON 24EA53VQ-P (LG)
+{% include card.html url="https://www.lg.com/jp/monitors/fhd-qhd/24ea53vq-p/" title="23.8inch IPSモニター JAN:49-89027-005242 - 24EA53VQ-P | LG JP" description="LGについて理解する 24EA53VQ-P. LG の写真、レビュー、技術仕様書をクリックしてください 23.8inch IPSモニター JAN:49-89027-005242." %}
+
+- 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
+- 電源コネクタ: DC電源ケーブル (IEC 60320 C13)
+- 解像度: 1920x1080
+- 表示色: 1,677万色
+- 種類: 23.8型AH-IPSパネル (非光沢LED)
+- スピーカ: なし
+- 音声入出: ステレオミニジャック
 
 ### LG-2
 
@@ -52,7 +61,7 @@ layout: default
 {% include card.html url="https://www.asus.com/jp/displays-desktops/monitors/eye-care/vx207ne/" title="VX207NE｜モニター｜ASUS 日本" description="ASUSのEye Careモニタは、TÜVRheinlandの低青色発光とちらつきのない認証を最も多く受けています。" %}
 
 - 映像コネクタ: DVIケーブル, VGAケーブル
-- 電源コネクタ: DCケーブル
+- 電源コネクタ: DC電源ケーブル
 - 解像度: 1366x768
 - 表示色: 1,677万色
 - 種類: 19.5型TNパネル (非光沢LCD)
