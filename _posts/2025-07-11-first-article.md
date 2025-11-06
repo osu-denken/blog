@@ -15,7 +15,8 @@ layout: default
 
 http://osudenken.blog.fc2.com/blog-category-0.html
 
-<img width="861" height="387" alt="image" src="https://github.com/user-attachments/assets/d4783cc5-bd0f-42a4-8921-2d7f1fdb7b82" />
+![fc2ブログ](https://github.com/user-attachments/assets/d4783cc5-bd0f-42a4-8921-2d7f1fdb7b82)
+
 
 2013/04/17にFC2ブログにて一度開設していた痕跡があります。<br>
 つまり、電研の約12年ぶりのブログであると言えるでしょう。<br>
