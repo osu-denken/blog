@@ -14,6 +14,8 @@ layout: default
 
 ## コンピュータ類
 ### デスクトップ 1
+![デスクトップパソコン-1](https://osu-denken.github.io/blog/images/2025-11-06-pc-1.png)
+
 - CPU: [Intel Core i5 12600K](https://www.intel.co.jp/content/www/jp/ja/products/sku/134589/intel-core-i512600k-processor-20m-cache-up-to-4-90-ghz/specifications.html) (3.7GHz, 10コア16スレッド, L1Cache-864KB L2Cache-9.5MB L3Cache-20MB)
 - メモリ: 32GB (16GBx2, DDR5-4800 2400MHz, [ADATA](https://www.adata.com/jp/consumer/category/computer-memory/dram-module-ddr5-4800-u-dimm/))
 - ストレージ: SSD 1TB (Samsung SSD 980 PRO 1TB)
@@ -24,7 +26,33 @@ layout: default
 
 イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
 
+### デスクトップ 2
+![デスクトップパソコン-2](https://osu-denken.github.io/blog/images/2025-11-06-pc-2.png)
+
+- CPU: [AMD Ryzen 7 9800X3D](https://www.amd.com/ja/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html) (4.7GHz, 8コア16スレッド, L1Cache-640KB L2Cache-8MB L3Cache-96MB)
+- メモリ: 32GB (16GBx2, DDR5-5600 2800MHz, 未調査)
+- ストレージ: SSD 1TB (未調査)
+- マザーボード: 未調査
+- グラフィックス: NVIDIA GeForce RTX 3090 Ti, AMD Radeon Graphics (未調査)
+- 無線NIC: あり (未調査)
+- OS: Windows 11 Pro
+
+イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
+
+### デスクトップ 3
+![デスクトップパソコン-3](https://osu-denken.github.io/blog/images/2025-11-06-pc-3.png)
+
+詳細未調査
+
+### デスクトップ 4
+![デスクトップパソコン-4](https://osu-denken.github.io/blog/images/2025-11-06-pc-4.png)
+
+詳細未調査
+
 ### Raspberry Pi 4 Model B x2
+![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
+![ラズパイフタなし](https://osu-denken.github.io/blog/images/2025-11-06-raspi-2.png)
+
 手のひらサイズの小型コンピュータです。LinuxであるDebianベースのRaspberry OSがインストールされています。
 大学祭の展示でScratchを用いたプログラミング体験に使いました。
 
@@ -58,14 +86,34 @@ layout: default
 映像用のケーブルです。古めのゲーム機などに使われていたものです。
 
 ## ネットワーク類
-### L2スイッチ（ルータ）
-本来はルータですが、ここでは利用用途として表記しています。
+### L2スイッチ/ルータ UNIVERGE IX2215 (NEC)
+![NEC IX2215](https://osu-denken.github.io/blog/images/2025-11-06-nec-ix2215.png)
+
+{% include card.html url="https://jpn.nec.com/univerge/ix/Info/ix2215.html" title="UNIVERGE IX2215 : UNIVERGE IXシリーズ | NEC" description="UNIVERGE IX2000/IX3000シリーズ。ギガビット回線とワイヤレス回線に対応するオールインワンタイプの拠点用ルータ、UNIVERGE IX2215。" %}
+
+- LANポート数 (合計): 10
+  - GE0: 1
+  - GE1: 1
+  - GE2 (L2SW): 8
+- その他コネクタ: USB, BRI(2B+1D)
+
+厳密にはスイッチングハブを内蔵したルータですが、ここでは利用用途、機能として表記しています。
 LANコネクタ（RJ-45コネクタ）がそこそこあるためスイッチとして利用しています。
 同ネットワーク内を有線で接続するために使います。
 
-ここから大学内のネットワーク（LEONET）を経由してインターネットを利用します。
+ここから大学内のネットワーク（LEONET）を経由してインターネットを利用します。一番左側の1つのポートと大学のLANを接続します。
+
+GEとはGigabit EthernetのことでGE0、GE1、GE2はそれぞれ内部で物理的に独立したネットワークインターフェースを持っており、GE2はスイッチングハブのポートです。<br>
+同じネットワークに接続する場合、つまり、基本的にパソコンはL2スイッチであるGE2のポート、右側の上下8つのポートに挿し込みます。
+
+L2スイッチではポートベースVLAN機能(仮想LAN)があるため、GE2をより分割できます。
+
+USBメモリによる初期設定が可能です。<br>
+BRIは右から3つそれぞれ違った形状のポートですが、ISDNは現時点でほとんど廃止されているため、基本的には利用しません。
 
 ### アクセスポインタ（ルータ）
+![アクセスポインタ](https://osu-denken.github.io/blog/images/2025-11-06-ap.png)
+
 本来はルータですが、無線機能（アクセスポインタ）のみを利用しているため、アクセスポインタとして表記しています。Wi-Fiを利用するためのものです。
 
 このアクセスポインタはL2スイッチに差し込んでいます。
@@ -104,6 +152,8 @@ EPSON製のプリンターです。
 - 消費電力: 通常16.7W 最大34W
 
 ### FLATRON 24EA53VQ-P (LG)
+![FLATRON 24EA53VQ-P](https://osu-denken.github.io/blog/images/2025-11-06-FLATRON-24EA53VQ-P.png)
+
 {% include card.html url="https://www.lg.com/jp/monitors/fhd-qhd/24ea53vq-p/" title="23.8inch IPSモニター JAN:49-89027-005242 - 24EA53VQ-P | LG JP" description="LGについて理解する 24EA53VQ-P. LG の写真、レビュー、技術仕様書をクリックしてください 23.8inch IPSモニター JAN:49-89027-005242." %}
 
 - 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
@@ -163,7 +213,7 @@ EPSON製のプリンターです。
 - スピーカ: なし
 - 音声入出: なし
 
-### AQUOS テレビ (SHARP)
+### テレビ AQUOS (SHARP)
 {% include card.html url="https://jp.sharp/support/aquos/product/lc22k9.html" title="機種別サポート情報（LC-22K9）｜液晶テレビ（AQUOS）｜サポート・お問い合わせ：シャープ" description="ホームサポート・お問い合わせ液晶テレビ（AQUOS）機種別サポート情報LC-22K9" %}
 
 - 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル, RCAケーブル
