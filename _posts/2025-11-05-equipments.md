@@ -1,6 +1,7 @@
 ---
 title: "部室の機器など"
 date: 2025-11-05
+last_modified_at: 2025-11-06
 categories: []
 tags: [マニュアル]
 layout: default
