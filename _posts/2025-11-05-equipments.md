@@ -74,6 +74,7 @@ layout: default
 詳細は[部室サーバに関する情報など](https://osu-denken.github.io/blog/2025/10/30/club-sv.html) にて記載しています。
 
 - サーバーラック
+
 ![サーバーラック](https://osu-denken.github.io/blog/images/2025-11-08-sv-rack.png)
 
 
