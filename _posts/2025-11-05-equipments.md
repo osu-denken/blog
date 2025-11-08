@@ -7,7 +7,7 @@ tags: [マニュアル]
 layout: default
 ---
 
-何があるのかを一度再確認して把握するため、部室に置いてある機器、ケーブルなどを一覧としてまとめました。
+何があるのかを一度再確認して把握するため、部室に置いてある機器、ケーブルなどを一覧としてまとめました。<br>
 ここではそれぞれいくつあるのかも記載しておくといいでしょう。
 
 11/6時点での情報です。
@@ -40,14 +40,26 @@ layout: default
 イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
 
 ### デスクトップ 3
-![デスクトップパソコン-3](https://osu-denken.github.io/blog/images/2025-11-06-pc-3.png)
+![デスクトップパソコン-3](https://osu-denken.github.io/blog/images/2025-11-08-pc-3.png)
 
-詳細未調査
+- CPU: Intel Core i7 8700 (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 32GB (16GBx2, DDR4-3602 1801MHz, G.Skil)
+- ストレージ: 2.4TB (未調査)
+- マザーボード: ASUS PRIME Z390M-PLUS
+- グラフィックス: GIGABYTE NVIDIA GeForce GTX 1660 (GPU 1530MHz, VRAM 6GB GDDR5 4001MHz)
+- 無線NIC: 未調査
+- OS: Windows 11 Home
 
 ### デスクトップ 4
 ![デスクトップパソコン-4](https://osu-denken.github.io/blog/images/2025-11-06-pc-4.png)
 
-詳細未調査
+- CPU: Intel Core i7 8700 (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 16GB (8GBx2, DDR4-2666 1333 MHz)
+- ストレージ: 3.4TB (未調査)
+- マザーボード: MSI H370 GAMING PLUS (MS-7B22)
+- グラフィックス: NVIDIA GeForce GTX 1050 Ti
+- 無線NIC: 未調査
+- OS: Windows 11 Pro
 
 ### Raspberry Pi 4 Model B x2
 ![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
@@ -57,12 +69,24 @@ layout: default
 大学祭の展示でScratchを用いたプログラミング体験に使いました。
 
 ### サーバ x3
+![サーバー](https://osu-denken.github.io/blog/images/2025-11-08-sv.png)
 - Dell PowerEdge R630 x3<br>
 詳細は[部室サーバに関する情報など](https://osu-denken.github.io/blog/2025/10/30/club-sv.html) にて記載しています。
 
+- サーバーラック
+![サーバーラック](https://osu-denken.github.io/blog/images/2025-11-08-sv-rack.png)
+
+
+### コンピュータ 5
+![CP-5](https://osu-denken.github.io/blog/images/2025-11-08-mc-sv.png)
+調査中
+- OS: Ubuntu
+
 ## ケーブル類
 ### LANケーブル
-それぞれの機器をネットワークに繋げるためのケーブルです。LANケーブルの一つとしてUTPケーブルが多く使われています。  
+![UTPケーブル-Cat5e](https://osu-denken.github.io/blog/images/2025-11-08-utp-cable.png)
+
+それぞれの機器をネットワークに繋げるためのケーブルです。LANケーブルの一つとしてUTPケーブルが多く使われています。
 
 ### USBケーブル
 ほとんどのデバイスに使われている充電かつデータ転送用のケーブルです。
@@ -130,14 +154,20 @@ HDMI接続の映像出力先のモニタをボタンで切り替えることが�
 ステレオミニジャックで音声入力します。
 
 ### Webカメラ
+![webカメラ](https://osu-denken.github.io/blog/images/2025-11-08-webcamera.png)
+
 部会をするGoogle Meetに使われています。
 マイクが内蔵されています。
 
 ### プリンター
+![プリンタ](https://osu-denken.github.io/blog/images/2025-11-06-printer.png)
+
 EPSON製のプリンターです。
 
 ## ディスプレイ x7
 ### KH275V (I-O DATA)
+![KH275V](https://osu-denken.github.io/blog/images/2025-11-08-KH275V.png)
+
 {% include card.html url="https://www.iodata.jp/product/lcd/wide/kh275v/index.htm" title="KH275V | 超解像技術＆広視野角ADSパネル採用　27型ゲーミングモニター | アイ・オー・データ機器 I-O DATA" description="超解像技術でクッキリ美しい27型ゲーミングモニター「KH275V」の詳細ページです。" %}
 
 - 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
@@ -166,6 +196,8 @@ EPSON製のプリンターです。
 - 音声入出: ステレオミニジャック、マイク
 
 ### FLATRON E2742V-BN (LG)
+![FLATRON E2742V-BN](https://osu-denken.github.io/blog/images/2025-11-08-flatron-e2742v-bn.png)
+
 {% include card.html url="https://www.lg.com/jp/monitors/fhd-qhd/e2742v-bn/" title="27inch ワイド液晶モニター - E2742V-BN | LG JP" description="LGについて理解する E2742V-BN. LG の写真、レビュー、技術仕様書をクリックしてください 27inch ワイド液晶モニター." %}
 
 - 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
@@ -178,6 +210,8 @@ EPSON製のプリンターです。
 - 音声入出: ステレオミニジャック、マイク
 
 ### VX207NE (ASUS)
+![VX207NE](https://osu-denken.github.io/blog/images/2025-11-08-vx207ne.png)
+
 {% include card.html url="https://www.asus.com/jp/displays-desktops/monitors/eye-care/vx207ne/" title="VX207NE｜モニター｜ASUS 日本" description="ASUSのEye Careモニタは、TÜVRheinlandの低青色発光とちらつきのない認証を最も多く受けています。" %}
 
 - 映像コネクタ: DVIケーブル, VGAケーブル
@@ -190,6 +224,8 @@ EPSON製のプリンターです。
 - 音声入出: なし
 
 ### ProLite GE2488HS (iiyama)
+![ProLite-GE2488HS](https://osu-denken.github.io/blog/images/2025-11-08-prolite-ge2488hs.png)
+
 {% include card.html url="https://www.mouse-jp.co.jp/iiyama/support/download/manual/lcd/GE2488HS-usermanual-j.pdf?msockid=1602dc13a9b56bbb338bca92a8356ae9" title="GE2488HS-usermanual-j.pdf" description="取扱説明書" %}
 
 - 映像コネクタ: DVIケーブル, VGAケーブル
@@ -202,6 +238,8 @@ EPSON製のプリンターです。
 - 音声入出: ステレオミニジャック (イヤホン, マイク)
 
 ### PCVD-17SA1 (VAIO)
+![PCVD-17SA1](https://osu-denken.github.io/blog/images/2025-11-08-pcvd-17sa1.png)
+
 {% include card.html url="https://contents.sony.jp/support/vaio/download/man/4679244011.pdf" title="PCVD-17SA1" description="取扱説明書" %}
 
 - 映像コネクタ: VGA
