@@ -252,7 +252,9 @@ EPSON製のプリンターです。
 - スピーカ: なし
 - 音声入出: なし
 
-### テレビ AQUOS (SHARP)
+### AQUOS LC-22K9 テレビ (SHARP)
+![AQUOS](https://osu-denken.github.io/blog/images/2025-11-12-aquos.png)
+
 {% include card.html url="https://jp.sharp/support/aquos/product/lc22k9.html" title="機種別サポート情報（LC-22K9）｜液晶テレビ（AQUOS）｜サポート・お問い合わせ：シャープ" description="ホームサポート・お問い合わせ液晶テレビ（AQUOS）機種別サポート情報LC-22K9" %}
 
 - 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル, RCAケーブル
