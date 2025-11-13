@@ -22,9 +22,9 @@ MSIであればDELETEキーを連打することでUEFI/BIOSを起動する。
 F11を連打してブートディスクを選択する
 
 ### ガイド
-[https://wiki.archlinux.jp/index.php/インストールガイド](https://wiki.archlinux.jp/index.php/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%82%AC%E3%82%A4%E3%83%89)を参考にインストールする。
-
-[https://note.com/sue93/n/n3b9466019753](https://note.com/sue93/n/n3b9466019753)
+- [https://zenn.dev/ytjvdcm/articles/0efb9112468de3](https://zenn.dev/ytjvdcm/articles/0efb9112468de3)
+- [https://wiki.archlinux.jp/index.php/インストールガイド](https://wiki.archlinux.jp/index.php/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%82%AC%E3%82%A4%E3%83%89)を参考にインストールする。
+- [https://note.com/sue93/n/n3b9466019753](https://note.com/sue93/n/n3b9466019753)
 
 ### 日本語キーボードレイアウトに変更
 ```bash
@@ -64,11 +64,16 @@ gdisk /dev/sda
 cfdisk /dev/sda
 ```
 
-```bash
-mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
+/dev/sda1 500M EFI System
+/dev/sda2 1G Linux swap
+/dev/sda3 464.3G Linux root (x86-64)
 
-mount /dev/sda2 /mnt
+```bash
+# mkfs.fat -F 32 /dev/sda1
+# mkswap /dev/sda2
+# mkfs.ext4 /dev/sda3
+
+mount /dev/sda3 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 
