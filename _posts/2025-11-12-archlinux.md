@@ -39,7 +39,7 @@ cat /sys/firmware/efi/fw_platform_size
 
 ### lsblkでドライブ情報
 ```bash
-lsblk -O NAME,SIZE,MODEL,VENDER
+lsblk -o NAME,SIZE,MODEL,VENDOR
 ```
 
 
@@ -77,7 +77,7 @@ mount /dev/sda3 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 
-pacstrap -K /mnt base linux linux-firmware vim sudo
+pacstrap -K /mnt base linux linux-firmware vim sudo networkmanager dhcpcd
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -86,7 +86,7 @@ arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 hwclock --systohc
 
-vim /etc/locale.gen     # -> en_US.UTF-8 UTF-8とja_JP.UTF-8 UTF-8 をコメントアウト
+vim /etc/locale.gen     # -> en_US.UTF-8 UTF-8とja_JP.UTF-8 UTF-8 を外す
 する
 
 locale-gen
@@ -122,7 +122,7 @@ passwd
 ### ブートローダ
 ```bash
 pacman -S grub efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
@@ -130,5 +130,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```bash
 exit
 umount -R /mnt
+swapoff -a
 reboot
 ```
