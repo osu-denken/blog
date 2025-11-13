@@ -24,6 +24,8 @@ F11を連打してブートディスクを選択する
 ### ガイド
 [https://wiki.archlinux.jp/index.php/インストールガイド](https://wiki.archlinux.jp/index.php/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%82%AC%E3%82%A4%E3%83%89)を参考にインストールする。
 
+[https://note.com/sue93/n/n3b9466019753](https://note.com/sue93/n/n3b9466019753)
+
 ### 日本語キーボードレイアウトに変更
 ```bash
 loadkeys jp106
@@ -98,6 +100,13 @@ KEYMAP=jp106
 ### /etc/hostname の編集
 ```txt
 denken-pc-4
+```
+
+### /etc/hosts の編集
+```txt
+127.0.0.1 localhost
+::1 localhost
+127.0.1.1 denken-pc-4.localdomain denken-pc-4
 ```
 
 ### パスワード再設定
