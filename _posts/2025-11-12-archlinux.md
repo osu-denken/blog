@@ -46,12 +46,18 @@ lsblk -O NAME,SIZE,MODEL,VENDER
 fdisk -l
 ```
 
-### フォーマットする
+### シグネチャを削除する
 ```bash
 wipefs -a /dev/sda
 ```
 
 ### パーティション作成
+```bash
+gdisk /dev/sda
+```
+
+もしくは
+
 ```bash
 cfdisk /dev/sda
 ```
