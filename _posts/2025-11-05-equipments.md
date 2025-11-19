@@ -61,6 +61,9 @@ layout: default
 - 無線NIC: 未調査
 - OS: Windows 11 Pro, ArchLinux (デュアルブート)
 
+ライセンスはWindows 11 Home となっており、異なったライセンスのWindowsが入っているため再度インストールすることを推奨
+
+
 ### Raspberry Pi 4 Model B x2
 ![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
 ![ラズパイフタなし](https://osu-denken.github.io/blog/images/2025-11-06-raspi-2.png)
