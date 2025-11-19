@@ -59,7 +59,7 @@ layout: default
 - マザーボード: MSI H370 GAMING PLUS (MS-7B22)
 - グラフィックス: NVIDIA GeForce GTX 1050 Ti
 - 無線NIC: 未調査
-- OS: Windows 11 Pro, ArchLinux
+- OS: Windows 11 Pro, ArchLinux (デュアルブート)
 
 ### Raspberry Pi 4 Model B x2
 ![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
@@ -83,9 +83,9 @@ RAIDコントローラが壊れている可能性があります。
 ### コンピュータ 5
 ![CP-5](https://osu-denken.github.io/blog/images/2025-11-08-mc-sv.png)
 調査中
-- CPU: Intel Core i7 4930K (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
-- メモリ: 16GB (4GBx4)
-- ストレージ: SSD 467GiB
+- CPU: Intel Core i7 4930K (3.4GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 16GB (4GBx4 DDR3)
+- ストレージ: SSD 500GB
 - マザーボード: -
 - OS: Ubuntu
 
