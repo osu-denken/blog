@@ -1,7 +1,7 @@
 ---
 title: "部室の機器など"
 date: 2025-11-05
-last_modified_at: 2025-11-12
+last_modified_at: 2025-11-19
 categories: []
 tags: [マニュアル]
 layout: default
@@ -10,7 +10,7 @@ layout: default
 何があるのかを一度再確認して把握するため、部室に置いてある機器、ケーブルなどを一覧としてまとめました。<br>
 ここではそれぞれいくつあるのかも記載しておくといいでしょう。
 
-11/12時点での情報です。
+11/19時点での情報です。
 
 ## コンピュータ類
 ### デスクトップ 1
@@ -59,7 +59,7 @@ layout: default
 - マザーボード: MSI H370 GAMING PLUS (MS-7B22)
 - グラフィックス: NVIDIA GeForce GTX 1050 Ti
 - 無線NIC: 未調査
-- OS: Windows 11 Pro
+- OS: Windows 11 Pro, ArchLinux
 
 ### Raspberry Pi 4 Model B x2
 ![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
@@ -83,6 +83,10 @@ RAIDコントローラが壊れている可能性があります。
 ### コンピュータ 5
 ![CP-5](https://osu-denken.github.io/blog/images/2025-11-08-mc-sv.png)
 調査中
+- CPU: Intel Core i7 4930K (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 16GB (4GBx4)
+- ストレージ: SSD 467GiB
+- マザーボード: -
 - OS: Ubuntu
 
 ## ディスプレイ x7
