@@ -1,7 +1,7 @@
 ---
 title: "部室の機器など"
 date: 2025-11-05
-last_modified_at: 2025-11-19
+last_modified_at: 2025-11-21
 categories: []
 tags: [マニュアル]
 layout: default
@@ -10,10 +10,10 @@ layout: default
 何があるのかを一度再確認して把握するため、部室に置いてある機器、ケーブルなどを一覧としてまとめました。<br>
 ここではそれぞれいくつあるのかも記載しておくといいでしょう。
 
-11/19時点での情報です。
+11/21時点での情報です。
 
 ## コンピュータ類
-### デスクトップ 1
+### デスクトップ 1 (denken-pc-1)
 ![デスクトップパソコン-1](https://osu-denken.github.io/blog/images/2025-11-06-pc-1.png)
 
 - CPU: [Intel Core i5 12600K](https://www.intel.co.jp/content/www/jp/ja/products/sku/134589/intel-core-i512600k-processor-20m-cache-up-to-4-90-ghz/specifications.html) (3.7GHz, 10コア16スレッド, L1Cache-864KB L2Cache-9.5MB L3Cache-20MB)
@@ -26,7 +26,7 @@ layout: default
 
 イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
 
-### デスクトップ 2
+### デスクトップ 2 (denken-pc-2)
 ![デスクトップパソコン-2](https://osu-denken.github.io/blog/images/2025-11-06-pc-2.png)
 
 - CPU: [AMD Ryzen 7 9800X3D](https://www.amd.com/ja/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html) (4.7GHz, 8コア16スレッド, L1Cache-640KB L2Cache-8MB L3Cache-96MB)
@@ -39,7 +39,7 @@ layout: default
 
 イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
 
-### デスクトップ 3
+### デスクトップ 3 (denken-pc-3)
 ![デスクトップパソコン-3](https://osu-denken.github.io/blog/images/2025-11-08-pc-3.png)
 
 - CPU: Intel Core i7 8700 (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
@@ -50,7 +50,7 @@ layout: default
 - 無線NIC: 未調査
 - OS: Windows 11 Home
 
-### デスクトップ 4
+### デスクトップ 4 (denken-pc-4)
 ![デスクトップパソコン-4](https://osu-denken.github.io/blog/images/2025-11-06-pc-4.png)
 
 - CPU: Intel Core i7 8700 (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
@@ -63,6 +63,24 @@ layout: default
 
 ライセンスはWindows 11 Home となっており、異なったライセンスのWindowsが入っているため再度インストールすることを推奨
 
+### コンピュータ 5 (denken-pc-5)
+![CP-5](https://osu-denken.github.io/blog/images/2025-11-08-mc-sv.png)
+調査中
+- CPU: Intel Core i7 4930K (3.4GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 16GB (4GBx4 DDR3)
+- ストレージ: SSD 500GB
+- マザーボード: -
+- OS: Ubuntu
+
+### ミニPC 6 (denken-pc-6)
+![Intel Mac mini](https://osu-denken.github.io/blog/images/2025-11-21-intelmacmini.png)
+調査中
+- CPU: Intel Core i3 8100B (3.6GHz, 4コア4スレッド, L1Cache-256KB L2Cache-1MB L3Cache-4MB)
+- GPU: Intel UHD Graphics 630
+- メモリ: 8GB (4GBx2 DDR4-2666)
+- ストレージ: SSD 128GB
+- マザーボード: APN 661-10223
+- OS: Macintosh 13
 
 ### Raspberry Pi 4 Model B x2
 ![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
@@ -81,16 +99,6 @@ RAIDコントローラが壊れている可能性があります。
 - サーバーラック
 
 ![サーバーラック](https://osu-denken.github.io/blog/images/2025-11-08-sv-rack.png)
-
-
-### コンピュータ 5
-![CP-5](https://osu-denken.github.io/blog/images/2025-11-08-mc-sv.png)
-調査中
-- CPU: Intel Core i7 4930K (3.4GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
-- メモリ: 16GB (4GBx4 DDR3)
-- ストレージ: SSD 500GB
-- マザーボード: -
-- OS: Ubuntu
 
 ## ディスプレイ x7
 ### KH275V (I-O DATA)
