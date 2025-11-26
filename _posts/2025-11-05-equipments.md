@@ -34,7 +34,7 @@ layout: default
 - ストレージ: SSD 1TB (未調査)
 - マザーボード: 未調査
 - グラフィックス: NVIDIA GeForce RTX 3090 Ti, AMD Radeon Graphics (未調査)
-- 無線NIC: あり (未調査)
+- 無線NIC: あり
 - OS: Windows 11 Pro
 
 イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
@@ -65,22 +65,28 @@ layout: default
 
 ### コンピュータ 5 (denken-pc-5)
 ![CP-5](https://osu-denken.github.io/blog/images/2025-11-08-mc-sv.png)
-調査中
+
 - CPU: Intel Core i7 4930K (3.4GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
 - メモリ: 16GB (4GBx4 DDR3)
 - ストレージ: SSD 500GB
-- マザーボード: -
+- マザーボード: ASUS P9X79 Pro
+- 無線NIC: なし
 - OS: Ubuntu
+
+大学祭用のマイクラサーバー、PaperMC を起動しています。メモリが6枚刺さっているのにも関わらず、4枚のみしか認識していない。
 
 ### ミニPC 6 (denken-pc-6)
 ![Intel Mac mini](https://osu-denken.github.io/blog/images/2025-11-21-intelmacmini.png)
-調査中
+
 - CPU: Intel Core i3 8100B (3.6GHz, 4コア4スレッド, L1Cache-256KB L2Cache-1MB L3Cache-4MB)
 - GPU: Intel UHD Graphics 630
 - メモリ: 8GB (4GBx2 DDR4-2666)
 - ストレージ: SSD 128GB
 - マザーボード: APN 661-10223
-- OS: Macintosh 13
+- 無線NIC: あり
+- OS: MacOS 13
+
+現時点でHDMI入力切替機器により、デスクトップ 3 が接続されている ディスプレイ 3 と共用
 
 ### Raspberry Pi 4 Model B x2
 ![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
