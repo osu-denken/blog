@@ -1,3 +1,5 @@
+---
+title: トップ
 layout: default
 ---
 <ul class="cardlist">
