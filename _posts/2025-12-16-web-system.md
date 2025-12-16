@@ -47,3 +47,12 @@ REST API の多くは部員のみが利用できます。なお、ライセン�
 ### 現在開いているページを編集する
 ![image](/blog/images/fe91ee54-2878-4b95-920b-e36749084e30.png)
 
+## ブログの編集画面について
+ブログはMarkdown記法で記述します。<br>
+左側が入力画面、右側がプレビュー画面となります。
+
+{% include card.html url="https://qiita.com/Qiita/items/c686397e4a0f4f11683d" title="Markdown記法 チートシート" description="Markdown記法のチートシートです。 記法はGitHub Flavored Markdownに準拠し、一部拡張しています。 Qiitaでシンタックスハイライト可能な言語一覧" %}
+
+### 画像の貼り付け
+- クリップボードから貼り付ける
+ 画像をコピーし、入力画面でCtrl + Vを入力することで画像をアップロードして貼り付けます。なお、デプロイに時間がかかるため、1～3分ほどは画像が表示されません。
