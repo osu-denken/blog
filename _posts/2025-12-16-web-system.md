@@ -1,7 +1,7 @@
 ---
 title: "電研Webシステムの使い方"
 date: 2025-12-16
-categories: [内部向け]
+categories: []
 tags: [マニュアル]
 layout: default
 author: osu-denken
