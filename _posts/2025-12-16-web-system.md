@@ -4,10 +4,32 @@ date: 2025-12-16
 categories: [内部向け]
 tags: [マニュアル]
 layout: default
+author: osu-denken
 ---
 
-# 概要
+## システムの概要 (電研Webサイト)
+電子計算研究部内部向けのシステムでブログ管理や部員管理などあらゆる機能を統合しています。
+
+Jekyll で構築したブログ以外のWebシステムは電研の独自実装、独自APIとなっており、フロントエンドとバックエンドを別々に分離しています。<br>
+Next.jsはGitHub Pages上へ静的エクスポートしてデプロイするためにSSGとして利用しています。<br>
+REST API の多くは部員のみが利用できます。なお、ライセンスはApache/MITとそれぞれ別々です。安全にGitHub PagesやFirebase、その他各種サービスにWorkersを経由してアクセスします。
+
+- フロントエンド『osu-denken.github.io』 Next.js/TypeScript on GitHub Pages
+- バックエンド『OSU-Denken Web API』 TypeScript on Cloudflare Workers
+
+詳しくは [osu-denken.github.io](https://github.com/osu-denken/osu-denken.github.io), [OSU-Denken Web API](https://github.com/osu-denken/web-api) をご覧ください。
+
+## ユーザー登録について (仮)
+入部した者のみユーザーを登録することが可能です。<br>
+ユーザーを登録するには他の部員から招待コードを受け取る必要があります。
+
+※なお今後、登録する仕組みを変更する可能性があります。
+
+## ログインについて
+電研Webサイトのナビゲーションバーにあるログインからログイン画面を開きます。
 
 ![image](/blog/images/a845ebe9-cc9e-4b7a-b800-3d08ca2c3e98.png)
+
+学籍番号とパスワードを入力してログインします。
 
 ![image](/blog/images/71e4a774-3230-422b-b2e1-85dca47b672e.png)
