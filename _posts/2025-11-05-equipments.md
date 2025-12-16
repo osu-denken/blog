@@ -5,6 +5,7 @@ last_modified_at: 2025-11-26
 categories: []
 tags: [マニュアル]
 layout: default
+author: osu-denken
 ---
 
 何があるのかを一度再確認して把握するため、部室に置いてある機器、ケーブルなどを一覧としてまとめました。<br>
