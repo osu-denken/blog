@@ -56,7 +56,7 @@ REST API の多くは部員のみが利用できます。なお、ライセン�
 
 {% include card.html url="https://qiita.com/Qiita/items/c686397e4a0f4f11683d" title="Markdown記法 チートシート" description="Markdown記法のチートシートです。 記法はGitHub Flavored Markdownに準拠し、一部拡張しています。 Qiitaでシンタックスハイライト可能な言語一覧" %}
 
-### 画像の貼り付け
+### 画像のアップロードと貼り付け
 ブログ編集画面で直接、画像をアップロードして貼り付けることができます。<br>
 なお、デプロイに時間がかかるため、1～3分ほどは画像が表示されません。
 
