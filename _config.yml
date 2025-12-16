@@ -10,7 +10,6 @@ commonmark:
     - autolink
     - table
     - tagfilter
-    - jekyll-paginate
 plugins:
   - jekyll-paginate
 kramdown:
@@ -19,4 +18,4 @@ kramdown:
   tables: true
   
 paginate: 10
-paginate_path: "/page:num/"
+paginate_path: "page:num/"
