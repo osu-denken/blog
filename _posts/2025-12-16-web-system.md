@@ -7,3 +7,4 @@ layout: default
 ---
 
 ここからMarkdown記法で本文を記述します。
+![image](/blog/images/71e4a774-3230-422b-b2e1-85dca47b672e.png)
