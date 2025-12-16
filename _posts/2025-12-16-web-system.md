@@ -12,7 +12,7 @@ author: osu-denken
 
 Jekyll で構築したブログ以外のWebシステムは電研の独自実装、独自APIとなっており、フロントエンドとバックエンドを別々に分離しています。<br>
 Next.jsはGitHub Pages上へ静的エクスポートしてデプロイするためにSSGとして利用しています。<br>
-REST API の多くは部員のみが利用できます。なお、ライセンスはApache/MITとそれぞれ別々です。安全にGitHub PagesやFirebase、その他各種サービスにWorkersを経由してアクセスします。
+REST API の多くは部員のみが利用できます。ライセンスはMITです。安全にGitHub PagesやFirebase、その他各種サービスにWorkersを経由してアクセスします。
 
 - フロントエンド『osu-denken.github.io』 Next.js/TypeScript on GitHub Pages
 - バックエンド『OSU-Denken Web API』 TypeScript on Cloudflare Workers
