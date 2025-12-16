@@ -49,6 +49,9 @@ REST API の多くは部員のみが利用できます。なお、ライセン�
 
 ## ブログの編集画面について
 ブログはMarkdown記法で記述します。<br>
+
+![image](/blog/images/d35dc87e-7e54-42cd-920f-70ca356b5d71.png)
+
 左側が入力画面、右側がプレビュー画面となります。
 
 {% include card.html url="https://qiita.com/Qiita/items/c686397e4a0f4f11683d" title="Markdown記法 チートシート" description="Markdown記法のチートシートです。 記法はGitHub Flavored Markdownに準拠し、一部拡張しています。 Qiitaでシンタックスハイライト可能な言語一覧" %}
