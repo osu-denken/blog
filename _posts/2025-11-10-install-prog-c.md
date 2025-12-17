@@ -4,6 +4,7 @@ date: 2025-11-10
 categories: []
 tags: [情報システム学科,プログラミング,C言語]
 layout: default
+author: kmmz532
 ---
 
 ## エディタ - VSCode の導入
