@@ -50,7 +50,7 @@ layout: default
 - A. [@osu_denken - Instagram](https://www.instagram.com/osu_denken/)です。
 
 ### Q. GitHubアカウントはどれですか？
-- A. [https://github.com/osu-denken](https://github.com/osu-denken)です。
+- A. [https://github.com/osu-denken](https://github.com/osu-denken)です。このOrganizationに参加するにはGitHubに参加している部員から招待を受け取ってください。
 
 ### Q. Discordサーバーに参加するには？
 - A. [大産大のStudent Hubと電研のDiscordサーバーへの入り方](https://osu-denken.github.io/blog/2025/11/03/sandai-discord.html) をご覧ください。
@@ -61,8 +61,25 @@ layout: default
 ## 設備について
 
 ### Q. 部室PCにはどのOSがインストールされていますか？
-- A. ほとんどはWindows 11ですが、一部のPCにはUbuntuも入ってます。
+- A. ほとんどはWindows 11ですが、一部のPCにはUbuntuやmacOSなどが入ってます。
 
 ### Q. 部室PCのパスワードを教えてください
 - A. ここでは記載できません。部員に聞いてください。
+
+### Q. どのような機器がありますか？
+- A. [部室の機器など](https://osu-denken.github.io/blog/2025/11/05/equipments.html) をご覧ください。
+
+### Q. 機器は使ってよろしいですか？
+- A. 置いてあるものが私物ではなければ利用可能です。上記の [部室の機器など](https://osu-denken.github.io/blog/2025/11/05/equipments.html) は部室のものです。
+
+## ブログについて
+### Q. ブログの作成/編集はしても構いませんか？
+- A. 常識の範囲内であればブログの作成、編集は歓迎です！
+
+## GitHub Organizationについて
+### Q. リポジトリを作成してもよろしいですか？
+- A. 当クラブで利用する用途であれば問題ありません！ただし、部活内で共有するものであるという前提で他の部員が変更を加える可能性がある上でご利用くださいませ。部員同士のチーム開発では特に便利です！
+
+### Q. ブランチ分けやプルリクなどの運用方針はありますか？
+- A. 特に取り決めはありません。各リポジトリでそれぞれ管理する形となります。複数人で作業しているリポジトリの場合はできる限りmainブラウザから新たにブランチを分岐するといいでしょう。例: dev, feature, fixなど
 
