@@ -47,13 +47,16 @@ layout: default
 - A. [@OSU_denken - X](https://x.com/OSU_denken)です。
 
 ### Q. Instagramアカウントはどれですか？
-- A. 現時点では作成していません。
+- A. [@osu_denken - Instagram](https://www.instagram.com/osu_denken/)です。
 
 ### Q. GitHubアカウントはどれですか？
 - A. [https://github.com/osu-denken](https://github.com/osu-denken)です。
 
 ### Q. Discordサーバーに参加するには？
 A. [大産大のStudent Hubと電研のDiscordサーバーへの入り方](https://osu-denken.github.io/blog/2025/11/03/sandai-discord.html) をご覧ください。
+
+### Q. LINEグループに参加するには？
+A. 入部後にグループへ招待します。まずは部員と友だち追加をして、招待してもらってください。
 
 ## 設備について
 
