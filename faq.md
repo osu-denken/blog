@@ -70,7 +70,7 @@ layout: default
 - A. [部室の機器など](https://osu-denken.github.io/blog/2025/11/05/equipments.html) をご覧ください。
 
 ### Q. 機器は使ってよろしいですか？
-- A. 置いてあるものが私物ではなければ利用可能です。上記の [部室の機器など](https://osu-denken.github.io/blog/2025/11/05/equipments.html) は部室のものです。
+- A. 上記の [部室の機器など](https://osu-denken.github.io/blog/2025/11/05/equipments.html) は部室のものです。自由にご活用ください
 
 ## ブログについて
 ### Q. ブログの作成/編集はしても構いませんか？
