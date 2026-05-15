@@ -96,6 +96,9 @@ author: osu-denken
 手のひらサイズの小型コンピュータです。LinuxであるDebianベースのRaspberry OSがインストールされています。
 大学祭の展示でScratchを用いたプログラミング体験に使いました。
 
+### サーバー x2
+- Dell PowerEdge R640 x2
+
 ### 破損したサーバ ~~サーバ x3~~
 RAIDコントローラが壊れている可能性があります。
 
