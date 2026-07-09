@@ -21,8 +21,8 @@ body, html {
   width: 300px;
   max-width: 30vw;
   margin-left: 2rem;
-  background: #f8f9fa;
-  border-left: 1px solid #e0e0e0;
+  background: var(--sidebar-bg);
+  border-left: 1px solid var(--sidebar-border);
   padding: 1rem;
   overflow-y: auto;
   height: auto;
@@ -43,7 +43,7 @@ body.scrolled .rightbar {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #333;
+  color: var(--heading);
 }
 
 li {
@@ -60,8 +60,8 @@ ul.cardlist {
 }
 
 .carditem {
-  background-color: #fff;
-  border: 1px solid #eaeaea;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 20px;
   transition: all 0.3s ease;
@@ -71,8 +71,8 @@ ul.cardlist {
 }
 
 li.carditem:hover {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: var(--card-accent);
+  border-color: var(--card-accent);
 }
 
 li.carditem a {
@@ -84,7 +84,7 @@ li.carditem a {
 }
 
 li.carditem a:hover {
-  color: #0070f3;
+  color: var(--card-accent);
   text-decoration: none;
 }
 
@@ -92,20 +92,20 @@ li.carditem a:hover {
 .card-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
+  color: var(--heading);
   margin-bottom: 10px;
 }
 
 .card-date {
   font-size: 0.9rem;
-  color: #888;
+  color: var(--text-subtle);
   margin-top: auto;
   text-align: right;
 }
 
 .card-excerpt {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-muted);
   margin: 10px 0;
   line-height: 1.6;
   text-overflow: ellipsis;
@@ -138,7 +138,7 @@ ul.breadcrumb li:not(:last-of-type)::after {
 
 div.post-meta {
   margin-bottom: 1rem;
-  color: #666;
+  color: var(--text-muted);
   font-size: 0.9rem;
 }
 

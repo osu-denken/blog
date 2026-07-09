@@ -43,6 +43,40 @@
   background-color: #3a3a3a;
 }
 
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 44px;
+  padding: 0 10px;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition-duration: 0.35s;
+}
+
+.theme-toggle:hover {
+  color: #f0ffff;
+  background-color: #3a3a3a;
+}
+
+/* ライト時は月（=ダークへ切替）、ダーク時は太陽を見せる */
+.theme-icon-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-light {
+  display: inline;
+}
+
+:root[data-theme="dark"] .theme-icon-dark {
+  display: none;
+}
+
 .nav img {
   display: block;
   max-height: 30px;

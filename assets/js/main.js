@@ -37,6 +37,31 @@ function applyAutolink() {
   }
 }
 
+// テーマ切り替え（初期値は head.html のインラインスクリプトで設定済み）
+function applyThemeToggle() {
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('click', function() {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {}
+  });
+
+  // 明示的に選択していない場合のみOSの設定に追従する
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  media.addEventListener('change', function(e) {
+    let saved = null;
+    try {
+      saved = localStorage.getItem('theme');
+    } catch (err) {}
+    if (saved === 'light' || saved === 'dark') return;
+    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+  });
+}
+
 // ログインしているときの処理
 function applyUserNav() {
   const login = document.getElementById('nav-login');
@@ -86,6 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', applyScrolledClass);
 
   applyAutolink();
+
+  applyThemeToggle();
 
   const token = localStorage.getItem("idToken");
   if (token) {
