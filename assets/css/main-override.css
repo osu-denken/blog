@@ -172,11 +172,13 @@ div.status-bar {
   margin-top: 9px;
 }
 
+/* .wrapper の中に入れて本文と左端を揃えるので、独自の逃げは持たせない */
 ul.breadcrumb {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-left: 12px;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 ul.breadcrumb li:not(:last-of-type)::after {
