@@ -13,23 +13,23 @@
     <a class="pagination-btn" href="{{ '/' | relative_url }}" aria-label="最初のページ">
       <iconify-icon icon="fa6-solid:angles-left" aria-hidden="true"></iconify-icon>
     </a>
-    <a class="pagination-btn" href="{{ paginator.previous_page_path | relative_url }}" rel="prev">
+    <a class="pagination-btn" href="{{ paginator.previous_page_path | relative_url }}" rel="prev" aria-label="前のページ">
       <iconify-icon icon="fa6-solid:chevron-left" aria-hidden="true"></iconify-icon>
-      <span class="pagination-label">前へ</span>
+      <!-- <span class="pagination-label">前へ</span> -->
     </a>
   {%- else -%}
     <span class="pagination-btn is-disabled" aria-hidden="true">
-      <iconify-icon icon="fa6-solid:angles-left"></iconify-icon>
+      <iconify-icon icon="fa6-solid:angles-left" aria-hidden="true"></iconify-icon>
     </span>
     <span class="pagination-btn is-disabled" aria-hidden="true">
-      <iconify-icon icon="fa6-solid:chevron-left"></iconify-icon>
-      <span class="pagination-label">前へ</span>
+      <iconify-icon icon="fa6-solid:chevron-left" aria-hidden="true"></iconify-icon>
+      <!-- <span class="pagination-label">前へ</span> -->
     </span>
   {%- endif -%}
 
   <span class="pagination-pages">
     {%- if win_start > 1 -%}
-      <a class="pagination-num" href="{{ '/' | relative_url }}">1</a>
+      <a class="pagination-num" href="{{ '/' | relative_url }}" aria-label="1ページ目">1</a>
       {%- if win_start > 2 -%}
         <span class="pagination-gap" aria-hidden="true">…</span>
       {%- endif -%}
@@ -37,11 +37,11 @@
 
     {%- for n in (win_start..win_end) -%}
       {%- if n == cur -%}
-        <span class="pagination-num is-current" aria-current="page">{{ n }}</span>
+        <span class="pagination-num is-current" aria-current="page" aria-label="{{ n }}ページ目">{{ n }}</span>
       {%- elsif n == 1 -%}
-        <a class="pagination-num" href="{{ '/' | relative_url }}">1</a>
+        <a class="pagination-num" href="{{ '/' | relative_url }}" aria-label="1ページ目">1</a>
       {%- else -%}
-        <a class="pagination-num" href="{{ site.paginate_path | replace: ':num', n | relative_url }}">{{ n }}</a>
+        <a class="pagination-num" href="{{ site.paginate_path | replace: ':num', n | relative_url }}" aria-label="{{ n }}ページ目">{{ n }}</a>
       {%- endif -%}
     {%- endfor -%}
 
@@ -50,13 +50,13 @@
       {%- if win_end < before_last -%}
         <span class="pagination-gap" aria-hidden="true">…</span>
       {%- endif -%}
-      <a class="pagination-num" href="{{ site.paginate_path | replace: ':num', total | relative_url }}">{{ total }}</a>
+      <a class="pagination-num" href="{{ site.paginate_path | replace: ':num', total | relative_url }}" aria-label="{{ total }}ページ目">{{ total }}</a>
     {%- endif -%}
   </span>
 
   {%- if paginator.next_page -%}
-    <a class="pagination-btn" href="{{ paginator.next_page_path | relative_url }}" rel="next">
-      <span class="pagination-label">次へ</span>
+    <a class="pagination-btn" href="{{ paginator.next_page_path | relative_url }}" rel="next" aria-label="次のページ">
+      <!-- <span class="pagination-label">次へ</span> -->
       <iconify-icon icon="fa6-solid:chevron-right" aria-hidden="true"></iconify-icon>
     </a>
     <a class="pagination-btn" href="{{ site.paginate_path | replace: ':num', total | relative_url }}" aria-label="最後のページ">
@@ -64,11 +64,11 @@
     </a>
   {%- else -%}
     <span class="pagination-btn is-disabled" aria-hidden="true">
-      <span class="pagination-label">次へ</span>
-      <iconify-icon icon="fa6-solid:chevron-right"></iconify-icon>
+      <!-- <span class="pagination-label">次へ</span> -->
+      <iconify-icon icon="fa6-solid:chevron-right" aria-hidden="true"></iconify-icon>
     </span>
     <span class="pagination-btn is-disabled" aria-hidden="true">
-      <iconify-icon icon="fa6-solid:angles-right"></iconify-icon>
+      <iconify-icon icon="fa6-solid:angles-right" aria-hidden="true"></iconify-icon>
     </span>
   {%- endif -%}
 </nav>
