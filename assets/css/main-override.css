@@ -172,12 +172,12 @@ div.status-bar {
   margin-top: 9px;
 }
 
-/* .wrapper の中に入れて本文と左端を揃えるので、独自の逃げは持たせない */
+/* .wrapper の中にあるので本文と左端が揃う。そこから少しだけ外へ出す */
 ul.breadcrumb {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-left: 0;
+  margin-left: -12px;
   padding-left: 0;
 }
 
