@@ -1,3 +1,8 @@
+:root {
+  --nav-height: 45px;
+  --rightbar-width: 300px;
+}
+
 body, html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -8,38 +13,31 @@ body, html {
   align-items: flex-start;
 }
 
+/* min-width:0 がないと、長いコードブロック等でフレックス項目が縮まず目次を押し出す */
 .page-content {
   flex: 1 1 0%;
-  margin-right: 240px;
+  min-width: 0;
 }
 
-.page-content:has(+ .rightbar:empty) {
-  margin-right: 0;
-}
-
+/* 目次はフローに残したまま sticky で追従させる。position:fixed にすると
+   コンテンツ側で幅を予約する必要が生じ、幅がズレると本文に被さる */
 .rightbar {
-  width: 300px;
+  flex: 0 0 auto;
+  width: var(--rightbar-width);
   max-width: 30vw;
   margin-left: 2rem;
   background: var(--sidebar-bg);
   border-left: 1px solid var(--sidebar-border);
   padding: 1rem;
   overflow-y: auto;
-  height: auto;
   position: sticky;
-  top: 50px;
+  top: var(--nav-height);
+  max-height: calc(100vh - var(--nav-height));
   box-sizing: border-box;
 }
 
 .rightbar:empty {
   display: none !important;
-}
-
-body.scrolled .rightbar {
-  height: calc(100vh - 50px);
-  position: fixed;
-  right: 0;
-  top: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {

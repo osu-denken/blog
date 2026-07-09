@@ -1,12 +1,3 @@
-// サイズに基づいてスクロールの調整
-function applyScrolledClass() {
-  if (document.documentElement.scrollHeight > window.innerHeight) {
-    document.body.classList.add('scrolled');
-  } else {
-    document.body.classList.remove('scrolled');
-  }
-}
-
 // .page-content内のURLを検出してリンクを有効化
 function applyAutolink() {
   const urlPtn = /(https?:\/\/[^\s<>"']+)/g;
@@ -107,9 +98,6 @@ function applyUserNav() {
 
 // 全体読み込み後に初期化する
 document.addEventListener('DOMContentLoaded', function() {
-  applyScrolledClass();
-  window.addEventListener('resize', applyScrolledClass);
-
   applyAutolink();
 
   applyThemeToggle();
