@@ -10,22 +10,22 @@
     {% assign url_paths = page.url | split: '/' %}
     {% assign url = '/' %}
 
-    <div class="status-bar">
-      <ul class="breadcrumb">
-        {% for path in url_paths %}
-        {% if path == '' %}
-        <li>
-          <a href="/blog/" title="Top">電研ブログ</a>
-        </li>
-        {% elsif url_paths.last == path %}
-        <li class="is-active">{{ page.title }}</li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-
     <div class="container">
       <main class="page-content" aria-label="Content">
+        <div class="status-bar">
+          <ul class="breadcrumb">
+            {% for path in url_paths %}
+            {% if path == '' %}
+            <li>
+              <a href="/blog/" title="Top">電研ブログ</a>
+            </li>
+            {% elsif url_paths.last == path %}
+            <li class="is-active">{{ page.title }}</li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+
         <div class="wrapper">
           <h1>{{ page.title }}</h1>
           <div class="post-meta">

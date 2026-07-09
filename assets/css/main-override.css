@@ -7,10 +7,13 @@ body, html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+/* stretch にして、目次が短くてもサイドバーの背景を本文の下端まで伸ばす。
+   固定ナビの回避はここで行い、サイドバーがナビ直下から始まるようにする */
 .container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
+  margin-top: var(--nav-height);
 }
 
 /* min-width:0 がないと、長いコードブロック等でフレックス項目が縮まず目次を押し出す */
@@ -19,8 +22,8 @@ body, html {
   min-width: 0;
 }
 
-/* 目次はフローに残したまま sticky で追従させる。position:fixed にすると
-   コンテンツ側で幅を予約する必要が生じ、幅がズレると本文に被さる */
+/* 背景を伸ばす「列」と、スクロール追従する「中身」を分ける。
+   .rightbar 自体を sticky にすると高さが中身ぶんに縮んでしまう */
 .rightbar {
   flex: 0 0 auto;
   width: var(--rightbar-width);
@@ -29,11 +32,15 @@ body, html {
   background: var(--sidebar-bg);
   border-left: 1px solid var(--sidebar-border);
   padding: 1rem;
-  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.rightbar > ul {
   position: sticky;
   top: var(--nav-height);
-  max-height: calc(100vh - var(--nav-height));
-  box-sizing: border-box;
+  max-height: calc(100vh - var(--nav-height) - 2rem);
+  overflow-y: auto;
+  margin: 0;
 }
 
 .rightbar:empty {
@@ -119,7 +126,7 @@ div.status-bar {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 4px;
-  margin-top: 54px;
+  margin-top: 9px;
 }
 
 ul.breadcrumb {
