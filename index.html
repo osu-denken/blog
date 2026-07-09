@@ -2,6 +2,8 @@
 title: トップ
 layout: default
 ---
+{% include pagination.html %}
+
 <ul class="cardlist">
   {% for post in paginator.posts %}
     <li class="carditem">
@@ -14,11 +16,4 @@ layout: default
   {% endfor %}
 </ul>
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">前へ</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">次へ</a>
-  {% endif %}
-</div>
+{% include pagination.html %}
