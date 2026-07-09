@@ -85,9 +85,14 @@ author: osu-denken
 - ストレージ: SSD 128GB
 - マザーボード: APN 661-10223
 - 無線NIC: あり
-- OS: MacOS 13
+- OS: macOS 13
 
 現時点でHDMI入力切替機器により、デスクトップ 3 が接続されている ディスプレイ 3 と共用
+
+### デスクトップ 7 (denken-pc-7)
+
+### ミニPC 8 (denken-pc-8)
+
 
 ### Raspberry Pi 4 Model B x2
 ![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
