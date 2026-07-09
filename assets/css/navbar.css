@@ -25,7 +25,8 @@
   margin-left: auto;
 }
 
-.nav a {
+.nav a,
+.nav a:visited {
   display: flex;
   align-items: center;
   height: 100%;
