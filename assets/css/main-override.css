@@ -51,8 +51,51 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading);
 }
 
-li {
+/* 空白を含まない長いURLは通常の規則では改行できず、横にはみ出す。
+   コードブロックは折り返すと読めないので、そちらは横スクロールで逃がす */
+.page-content li,
+.page-content p,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6,
+.page-content td,
+.page-content th,
+.page-content a,
+.rightbar a {
   overflow-wrap: anywhere;
+}
+
+.page-content pre,
+.page-content .highlight {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* pre の外側でインラインコードが伸びるのを防ぐ */
+.page-content code {
+  overflow-wrap: anywhere;
+}
+
+.page-content pre code {
+  overflow-wrap: normal;
+  white-space: pre;
+}
+
+/* 幅の広い表は表ごと横スクロールさせる */
+.page-content table {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.page-content img,
+.page-content iframe,
+.page-content video {
+  max-width: 100%;
 }
 
 ul.cardlist {
