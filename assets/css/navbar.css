@@ -84,6 +84,10 @@
   display: none;
 }
 
+:root[data-theme="dark"] .nav {
+  box-shadow: 0px 4px 10px #000;
+}
+
 .nav img {
   display: block;
   max-height: 30px;
