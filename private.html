@@ -1,0 +1,24 @@
+---
+title: 非公開記事
+layout: default
+permalink: /private/
+hide:
+  title: true
+  meta: true
+sitemap: false
+---
+<h1>
+  <iconify-icon class="card-lock" icon="fa6-solid:lock" title="非公開記事" aria-hidden="true"></iconify-icon>
+  <span id="private-title">非公開記事</span>
+</h1>
+
+<div class="post-meta">
+  <span id="private-meta"></span>
+</div>
+
+<div id="private-body">読み込み中...</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+<script src="{{ "/assets/js/private-api.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/private-view.js" | relative_url }}"></script>
