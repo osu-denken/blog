@@ -27,11 +27,11 @@
             </ul>
           </div>
 
-          {%- if !page.hide_title -%}
+          {%- unless page.hide.title -%}
           <h1>{{ page.title }}</h1>
-          {%- endif %}
+          {%- endunless %}
 
-          {%- if !page.hide_meta -%}
+          {%- unless page.hide.meta -%}
           <div class="post-meta">
             
             {%- if page.date -%}
@@ -57,15 +57,15 @@
             {%- endif -%}
 
           </div>
-          {%- endif -%}
+          {%- endunless -%}
 
           {{ content }}
         </div>
       </main>
 
-      {%- if !page.hide_rightbar -%}
+      {%- unless page.hide.rightbar -%}
       <aside class="rightbar">{%- include toc.html html=content sanitize=true -%}</aside>
-      {%- endif -%}
+      {%- endunless -%}
 
     </div>
 
