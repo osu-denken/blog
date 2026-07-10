@@ -28,7 +28,7 @@ async function applyPrivateView() {
     return;
   }
 
-  const data = await fetchPrivate('/private-posts/get', { slug: slug });
+  const data = await fetchPrivate('/private-posts/get', { slug: slug }, true);
   if (!data) {
     showPrivateMessage('この記事は存在しないか、閲覧する権限がありません。');
     return;

@@ -19,6 +19,11 @@ function createPrivateCard(post) {
   title.appendChild(lock);
   title.appendChild(document.createTextNode(post.title));
 
+  const excerpt = document.createElement('span');
+  excerpt.className = 'card-excerpt';
+  excerpt.textContent = "(非公開記事)";
+  item.appendChild(excerpt);
+
   const date = document.createElement('span');
   date.className = 'card-date';
   date.textContent = post.updatedAt.slice(0, 10);

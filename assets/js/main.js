@@ -53,6 +53,26 @@ function applyThemeToggle() {
   });
 }
 
+// 編集画面のURL。非公開記事はブログとは別のエディタで扱う
+function editHref() {
+  const path = window.location.pathname;
+
+  if (path.startsWith('/blog/private')) {
+    const slug = new URLSearchParams(window.location.search).get('page');
+    return slug ? '/portal/private/?page=' + encodeURIComponent(slug) : null;
+  }
+
+  let pagename = path.replace(/^\/blog\//, '');
+
+  if (pagename.endsWith('.html')) {
+    pagename = pagename.replace(/\//g, '-').replace(/\.html$/, '');
+  } else {
+    pagename = '_' + pagename;
+  }
+
+  return '/portal/blog/?action=edit&page=' + encodeURIComponent(pagename);
+}
+
 // ログインしているときの処理
 function applyUserNav() {
   const login = document.getElementById('nav-login');
@@ -64,6 +84,7 @@ function applyUserNav() {
   loginLink.addEventListener('click', function(e) {
     e.preventDefault();
     localStorage.removeItem("idToken");
+    localStorage.removeItem("refreshToken");
     localStorage.removeItem("displayName");
     window.location.reload();
   });
@@ -71,18 +92,15 @@ function applyUserNav() {
 
   if (!window.location.pathname.endsWith('/blog/') && !window.location.pathname.endsWith('/blog/index.html')) {
     const editLink = join.getElementsByTagName('a')[0];
-    let pagename = window.location.pathname;
+    const href = editHref();
 
-    pagename = pagename.replace(/^\/blog\//, '');
-
-    if (pagename.endsWith(".html")) {
-      pagename = pagename.replace(/\//g, '-');
-      pagename = pagename.replace(/\.html$/, '');
-    } else {
-      pagename = "_" + pagename;
+    // スラッグの無い非公開記事のページには編集するものがない
+    if (!href) {
+      join.remove();
+      return;
     }
 
-    editLink.href = '/portal/blog/?action=edit&page=' + encodeURIComponent(pagename);    
+    editLink.href = href;
     editLink.textContent = '✎';
     editLink.title = 'このページを編集';
     return;

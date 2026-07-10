@@ -147,7 +147,6 @@ li.carditem a:hover {
 /* 非公開記事であることを一目でわかるようにする */
 .card-lock {
   margin-right: 0.4em;
-  color: var(--card-accent);
   vertical-align: -0.05em;
 }
 
