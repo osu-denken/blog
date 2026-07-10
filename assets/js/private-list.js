@@ -22,13 +22,13 @@ function createPrivateCard(post) {
   const excerpt = document.createElement('span');
   excerpt.className = 'card-excerpt';
   excerpt.textContent = "(非公開記事)";
-  item.appendChild(excerpt);
 
   const date = document.createElement('span');
   date.className = 'card-date';
   date.textContent = post.updatedAt.slice(0, 10);
 
   link.appendChild(title);
+  item.appendChild(excerpt);
   link.appendChild(date);
   item.appendChild(link);
 
