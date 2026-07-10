@@ -19,16 +19,17 @@ function createPrivateCard(post) {
   title.appendChild(lock);
   title.appendChild(document.createTextNode(post.title));
 
-  const excerpt = document.createElement('span');
+  // 本文は取りに行かないので、抜粋の代わりに非公開である旨を出す
+  const excerpt = document.createElement('p');
   excerpt.className = 'card-excerpt';
-  excerpt.textContent = "(非公開記事)";
+  excerpt.textContent = '(非公開記事)';
 
   const date = document.createElement('span');
   date.className = 'card-date';
   date.textContent = post.updatedAt.slice(0, 10);
 
   link.appendChild(title);
-  item.appendChild(excerpt);
+  link.appendChild(excerpt);
   link.appendChild(date);
   item.appendChild(link);
 
