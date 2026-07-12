@@ -98,6 +98,49 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
 }
 
+/* 検索バー */
+.search-box {
+  position: relative;
+  margin: 0 0 1.5rem;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-subtle);
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.9rem 0.6rem 2.4rem;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.search-input:focus {
+  border-color: var(--card-accent);
+}
+
+.search-input::placeholder {
+  color: var(--text-subtle);
+}
+
+.search-empty,
+.search-hint {
+  color: var(--text-muted);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
 ul.cardlist {
   list-style: none;
   padding: 0;
@@ -105,6 +148,10 @@ ul.cardlist {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+ul.cardlist[hidden] {
+  display: none;
 }
 
 .carditem {

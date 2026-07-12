@@ -6,6 +6,12 @@ hide:
   meta: true
   rightbar: true
 ---
+<form class="search-box" action="{{ "/search.html" | relative_url }}" method="get" role="search">
+  <iconify-icon class="search-icon" icon="fa6-solid:magnifying-glass" aria-hidden="true"></iconify-icon>
+  <input type="search" name="q" class="search-input" placeholder="記事を検索..."
+    aria-label="記事を検索" autocomplete="off" />
+</form>
+
 {% include pagination.html %}
 
 <ul class="cardlist">

@@ -1,0 +1,17 @@
+---
+title: 記事検索
+layout: default
+hide:
+  rightbar: true
+---
+<div class="search-box">
+  <iconify-icon class="search-icon" icon="fa6-solid:magnifying-glass" aria-hidden="true"></iconify-icon>
+  <input type="search" id="search-input" class="search-input" placeholder="記事を検索..."
+    aria-label="記事を検索" autocomplete="off" autofocus data-baseurl="{{ site.baseurl }}" />
+</div>
+
+<p class="search-hint" id="search-hint">キーワードを入力すると記事を検索できます。</p>
+<ul class="cardlist" id="search-results" hidden></ul>
+<p class="search-empty" id="search-empty" hidden>該当する記事が見つかりませんでした。</p>
+
+<script src="{{ "/assets/js/search.js" | relative_url }}"></script>
