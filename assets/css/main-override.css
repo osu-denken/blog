@@ -316,5 +316,15 @@ a.pagination-num:hover {
   display: inline-flex;
   align-items: center;
   font-size: 1.25rem;
+  line-height: 1;
   text-decoration: none;
+  color: var(--text-muted);
+}
+
+.footer-rss:hover {
+  color: var(--text);
+}
+
+.footer-rss iconify-icon {
+  vertical-align: middle;
 }
