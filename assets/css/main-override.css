@@ -296,3 +296,10 @@ a.pagination-num:hover {
     display: none;
   }
 }
+
+.footer-rss {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
