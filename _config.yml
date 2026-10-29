@@ -12,6 +12,7 @@ commonmark:
     - autolink
     - table
     - tagfilter
+    - jekyll-paginate
 plugins:
   - jekyll-paginate
 kramdown:
