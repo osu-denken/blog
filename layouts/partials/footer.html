@@ -11,6 +11,9 @@
         <a class="footer-rss" href="{{ "feed.xml" | relURL }}" type="application/rss+xml" title="RSS" aria-label="RSS">
           <i class="fa-solid fa-rss" aria-hidden="true"></i>
         </a>
+        <a class="footer-rss" href="{{ "index.json" | relURL }}" title="JSON" aria-label="JSON">
+          <i class="fa-solid fa-code" aria-hidden="true"></i>
+        </a>
         {{ partial "gh-admin/button.html" (dict "kind" "footer" "page" .) }}
       </div>
     </div>

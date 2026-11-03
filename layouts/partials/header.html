@@ -1,28 +1,22 @@
-<nav class="nav">
-  <ul>
-    <li>
-      <a href="https://osu-denken.github.io"><img src="/icon.png" alt="電研ロゴ">電研</a>
-    </li>
-    <li class="right">
-      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="テーマを切り替え" title="テーマを切り替え">
+<header class="header">
+  <div class="header-inner">
+    <a class="title" href="{{ site.Home.RelPermalink }}">{{ site.Params.headerTitle | default site.Title }}</a>
+    <div class="header-actions">
+      <a class="icon-button" href="{{ "search.html" | relURL }}" aria-label="検索" title="検索">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      </a>
+      {{- /* GitHub でログインしたときだけ出る管理画面のボタン（hugo-gh-admin） */}}
+      {{- if and (eq .Kind "page") (eq .Section "posts") }}
+      {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "icon-button") }}
+      {{- end }}
+      {{ partial "gh-admin/button.html" (dict "kind" "new" "page" . "class" "icon-button") }}
+      {{ partial "gh-admin/button.html" (dict "kind" "admin" "page" . "class" "icon-button") }}
+      <a id="nav-join" class="nav-text" href="{{ "join.html" | relURL }}">入部</a>
+      <a id="nav-login" class="nav-text" href="{{ printf "%s?i=%s#login" site.Params.officialURL (strings.TrimPrefix "/" .RelPermalink) | safeURL }}">ログイン</a>
+      <button type="button" id="theme-toggle" class="icon-button theme-toggle" aria-label="テーマを切り替え" title="テーマを切り替え">
         <i class="fa-solid fa-sun theme-icon theme-icon-light" aria-hidden="true"></i>
         <i class="fa-solid fa-moon theme-icon theme-icon-dark" aria-hidden="true"></i>
       </button>
-    </li>
-    {{- /* GitHub でログインしたときだけ出る管理画面のボタン（hugo-gh-admin） */}}
-    <li class="nav-admin">
-      {{- if and (eq .Kind "page") (eq .Section "posts") }}
-      {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "nav-icon") }}
-      {{- end }}
-      {{ partial "gh-admin/button.html" (dict "kind" "new" "page" . "class" "nav-icon") }}
-      {{ partial "gh-admin/button.html" (dict "kind" "admin" "page" . "class" "nav-icon") }}
-      {{ partial "gh-admin/button.html" (dict "kind" "logout" "page" . "class" "nav-icon") }}
-    </li>
-    <li id="nav-join">
-      <a href="{{ "join.html" | relURL }}">入部</a>
-    </li>
-    <li id="nav-login">
-      <a href="{{ printf "%s?i=%s#login" site.Params.officialURL (strings.TrimPrefix "/" .RelPermalink) | safeURL }}">ログイン</a>
-    </li>
-  </ul>
-</nav>
+    </div>
+  </div>
+</header>
