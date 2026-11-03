@@ -28,6 +28,8 @@ function applyThemeToggle() {
 // ログインしているときの処理
 function applyUserNav() {
   const login = document.getElementById('nav-login');
+  // ログイン中は入部の案内は要らない
+  document.getElementById('nav-join')?.remove();
 
   // ナビバーの書き換え
   const loginLink = login.getElementsByTagName('a')[0];

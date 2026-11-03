@@ -20,6 +20,13 @@ if (checkOnly) {
   process.exit(0);
 }
 
+// 記事リポジトリ（posts/）を最新にする。失敗しても起動は続ける
+try {
+  execFileSync('git', ['-C', 'posts', 'pull', '--ff-only'], { cwd: root, stdio: 'inherit' });
+} catch {
+  console.warn('posts/ を更新できませんでした。手元の状態で起動します。');
+}
+
 const env = { ...process.env };
 const adminDir = process.env.GH_ADMIN_DIR;
 if (adminDir) {

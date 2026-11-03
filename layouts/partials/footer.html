@@ -4,7 +4,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">{{ site.Params.author | default site.Title }}</li>
+          <li class="p-name">{{ site.Params.footer | default site.Title }}</li>
         </ul>
       </div>
       <div class="footer-col footer-col-2">
@@ -14,7 +14,7 @@
         <a class="footer-rss" href="{{ "index.json" | relURL }}" title="JSON" aria-label="JSON">
           <i class="fa-solid fa-code" aria-hidden="true"></i>
         </a>
-        {{ partial "gh-admin/button.html" (dict "kind" "footer" "page" .) }}
+        {{ partial "gh-admin/button.html" (dict "kind" "admin" "page" . "class" "footer-admin" "label" "管理" "text" true) }}
       </div>
     </div>
   </div>
