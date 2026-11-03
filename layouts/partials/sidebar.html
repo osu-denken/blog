@@ -1,4 +1,4 @@
-<aside class="rightbar sidebar">
+<aside class="sidebar">
   {{- /* 記事の目次は見出し（h2・h3）があるときだけ */}}
   {{- if .IsPage }}
   {{- $toc := .TableOfContents | replaceRE `</?nav[^>]*>` "" }}

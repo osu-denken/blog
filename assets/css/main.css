@@ -78,7 +78,6 @@
 .sidebar-card { background-color: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 14px 16px; }
 .sidebar-title { font-size: 1rem; font-weight: bold; margin: 0 0 10px; color: var(--heading); }
 .sidebar-toc ul { margin: 0 0 0 1.1em; padding: 0; font-size: 0.9rem; }
-.sidebar-toc { position: sticky; top: calc(var(--nav-height) + 16px); max-height: calc(100vh - var(--nav-height) - 32px); overflow-y: auto; }
 .profile-name { font-weight: bold; margin: 0 0 6px; color: var(--heading); }
 .profile-bio { font-size: 0.85rem; color: var(--text-muted); margin: 0 0 10px; }
 .profile-links { display: flex; gap: 14px; font-size: 1.2rem; }
@@ -97,3 +96,22 @@
 
 /* 反映待ちの記事の帯にある編集ボタン */
 .pending-edit { margin-left: 0.75rem; color: var(--link); white-space: nowrap; }
+
+/* 本文とサイドバーの並べ方（kmmz blog と同じ）。本文は最大 840px、サイドバーは 260px で中央に寄せる。
+   720px 未満では本文の下にサイドバーを出す */
+.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: var(--nav-height) auto 0;
+  padding: 0 1.25rem 2rem;
+  box-sizing: border-box;
+}
+.page-content .wrapper { max-width: none; padding-left: 0; padding-right: 0; }
+.sidebar { padding-top: 30px; min-width: 0; }
+@media (min-width: 720px) {
+  .container:has(> .sidebar) { grid-template-columns: minmax(0, 840px) 260px; justify-content: center; }
+  .sidebar { position: sticky; top: calc(var(--nav-height) + 1rem); align-self: start; }
+}
