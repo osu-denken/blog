@@ -1,6 +1,8 @@
 baseURL = "https://osu-denken.net/blog/"
 languageCode = "ja"
 timeZone = "Asia/Tokyo"
+# OGP などの外部の取得は遅いことがあるため、既定の 30 秒を超えないようにする
+timeout = "5m"
 title = "電研ブログ"
 enableRobotsTXT = true
 
