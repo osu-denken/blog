@@ -144,3 +144,9 @@
 .card-tags .chip { font-size: 0.8rem; padding: 2px 8px; border: 1px solid var(--card-border); border-radius: 999px; color: var(--text-muted); text-decoration: none; }
 .card-tags .chip:hover { border-color: var(--card-accent); color: var(--card-accent); }
 @media (max-width: 600px) { .card-thumb { width: 72px; height: 72px; } }
+
+/* 一覧カードは全体をクリックできる（タイトルのリンクをカード全体に広げる）。編集ボタンとタグは別に押せる */
+.carditem { position: relative; }
+.card-title a::after { content: ""; position: absolute; inset: 0; border-radius: 10px; }
+.carditem:hover .card-title a { text-decoration: underline; }
+.card-edit, .card-tags .chip { position: relative; z-index: 1; }
