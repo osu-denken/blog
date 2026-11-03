@@ -22,7 +22,7 @@
       <a href="{{ "join.html" | relURL }}">入部</a>
     </li>
     <li id="nav-login">
-      <a href="https://osu-denken.github.io/?i=blog{{ strings.TrimPrefix "/blog" .RelPermalink }}#login">ログイン</a>
+      <a href="{{ printf "https://osu-denken.github.io/?i=blog%s#login" (strings.TrimPrefix "/blog" .RelPermalink) | safeURL }}">ログイン</a>
     </li>
   </ul>
 </nav>
