@@ -1,0 +1,9 @@
+<article class="carditem">
+  <div class="card-body">
+    <div class="card-meta">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006.01.02" }}</time>
+    </div>
+    <h2 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  </div>
+  {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "card-edit" "label" "編集") }}
+</article>

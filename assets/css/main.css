@@ -1,0 +1,35 @@
+:root {
+  --background: #fff;
+  --foreground: #1a1a1a;
+  --foreground-rgb: 26, 26, 26;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666;
+  --border: #ddd;
+  --link: #0b5cad;
+  --danger: #b00020;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #111;
+    --foreground: #eee;
+    --foreground-rgb: 238, 238, 238;
+    --text-primary: #eee;
+    --text-secondary: #aaa;
+    --border: #333;
+    --link: #7ab8ff;
+  }
+}
+body { margin: 0; font-family: sans-serif; color: var(--foreground); background: var(--background); line-height: 1.7; }
+.header-inner, .layout { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
+.header-actions { display: flex; gap: 8px; }
+.icon-button { color: var(--link); }
+.icon-button[hidden], .card-edit[hidden] { display: none; }
+.carditem { position: relative; border-bottom: 1px solid var(--border); padding: 12px 0; }
+.card-meta { font-size: 0.85rem; color: var(--text-secondary); }
+.card-title { margin: 4px 0; font-size: 1.1rem; }
+.card-title a { color: var(--link); }
+.card-edit { position: absolute; right: 0; top: 12px; }
+.post-title { font-size: 1.6rem; }
+.footer { max-width: 760px; margin: 24px auto; padding: 0 16px; color: var(--text-secondary); font-size: 0.85rem; }
+.pending-band { color: var(--text-secondary); font-size: 0.85rem; }

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <div class="layout">
+    <main class="contents">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+  {{ partial "footer.html" . }}
+  {{ partial "pending-templates.html" . }}
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

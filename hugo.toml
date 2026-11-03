@@ -1,0 +1,38 @@
+baseURL = "https://example.org/"
+languageCode = "ja"
+timeZone = "Asia/Tokyo"
+title = "検証用のブログ"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.highlight]
+  noClasses = false
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['$$', '$$'], ['\[', '\]']]
+    inline = [['\(', '\)']]
+
+[params]
+  description = "Hugo の検証用サイトです。"
+  headerTitle = "検証用のブログ"
+
+# 管理画面（gh-admin）の設定。検証では架空のリポジトリを指し、実在の記事リポジトリには書き込まない
+[params.ghAdmin]
+  branch = "main"
+
+[[module.imports]]
+  path = "github.com/kmmz532/hugo-gh-admin"
+
+[[module.imports]]
+  path = "github.com/kmmz532/hugo-shortcodes"

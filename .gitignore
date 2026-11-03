@@ -1,0 +1,6 @@
+public/
+resources/
+.hugo_build.lock
+# 実際の記事（部員の文章）は検証用にローカルだけに置く。コミットするのは sample-* だけ
+content/posts/*
+!content/posts/sample-*.md
