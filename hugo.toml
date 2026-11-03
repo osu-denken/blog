@@ -1,4 +1,4 @@
-baseURL = "https://osu-denken.github.io/denken-hugo/"
+baseURL = "https://osu-denken.net/denken-hugo/"
 languageCode = "ja"
 timeZone = "Asia/Tokyo"
 # OGP などの外部の取得は遅いことがあるため、既定の 30 秒を超えないようにする
@@ -61,7 +61,7 @@ enableRobotsTXT = true
   description = "大阪産業大学 文化会 電子計算研究部の公式ブログ。活動報告や制作物、部員による発信をしています。"
   headerTitle = "電研"
   # 公式サイト（ログインのトークンは、このサイトと同じ origin に保存される）
-  officialURL = "https://osu-denken.github.io/"
+  officialURL = "https://osu-denken.net/"
   author = "大阪産業大学 文化会 電子計算研究部"
 
 # サイドバーのリンク（URL が空なら出さない）
