@@ -48,7 +48,7 @@
     <h2 class="sidebar-title">タグ</h2>
     <div class="sidebar-chips">
       {{- range first 20 site.Taxonomies.tags.ByCount }}
-      <a class="chip" href="{{ "tags.html" | relURL }}#{{ .Name | urlize }}">#{{ .Page.Title }}</a>
+      <a class="chip" href="{{ "tags.html" | relURL }}#tag_{{ .Name | urlize }}">#{{ .Page.Title }}</a>
       {{- end }}
     </div>
     <a class="sidebar-more" href="{{ "tags.html" | relURL }}">すべてのタグ →</a>
