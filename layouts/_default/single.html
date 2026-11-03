@@ -2,7 +2,7 @@
 <article class="post" data-slug="{{ .File.ContentBaseName }}">
   <div class="status-bar">
     <ul class="breadcrumb">
-      <li><a href="{{ "/" | relURL }}" title="Top">{{ site.Title }}</a></li>
+      <li><a href="{{ site.Home.RelPermalink }}" title="Top">{{ site.Title }}</a></li>
       <li class="is-active">{{ .Title }}</li>
     </ul>
   </div>
