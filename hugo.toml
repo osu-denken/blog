@@ -11,8 +11,15 @@ enableRobotsTXT = true
   tag = "tags"
   category = "categories"
 
+# 旧サイトの /search.json（記事の配列）を同じ URL で出す
+[outputFormats.SEARCHJSON]
+  mediaType = "application/json"
+  baseName = "search"
+  isPlainText = true
+  notAlternative = true
+
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "SEARCHJSON"]
   section = ["HTML"]
   taxonomy = ["HTML"]
   term = ["HTML"]
