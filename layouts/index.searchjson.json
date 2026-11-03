@@ -3,6 +3,6 @@
 {{- range where site.RegularPages "Section" "posts" -}}
 {{- if not $first }},{{ end -}}
 {{- $first = false }}
-{{ dict "title" .Title "url" .RelPermalink "date" (.Date.Format "2006-01-02") "tags" (.Params.tags | default slice) "content" (.Plain | chomp) | jsonify }}
+{{ dict "title" .Title "url" (partial "post-url.html" .) "date" (.Date.Format "2006-01-02") "tags" (.Params.tags | default slice) "content" (.Plain | chomp) | jsonify }}
 {{- end }}
 ]

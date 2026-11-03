@@ -35,6 +35,11 @@ function card(post) {
   title.className = 'card-title';
   const link = document.createElement('a');
   link.href = post.url;
+  // 外部記事は別のタブで開く
+  if (/^https?:/.test(post.url)) {
+    link.target = '_blank';
+    link.rel = 'noopener';
+  }
   link.textContent = post.title;
   title.append(link);
 

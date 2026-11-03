@@ -1,7 +1,7 @@
 {{- $meta := partialCached "external-meta.html" . .File.Path }}
 <article class="carditem">
   <div class="card-body">
-    <h2 class="card-title"><a href="{{ .RelPermalink }}">{{ $meta.title }}</a></h2>
+    <h2 class="card-title"><a href="{{ partial "post-url.html" . }}"{{ if .Params.external }} target="_blank" rel="noopener"{{ end }}>{{ $meta.title }}</a>{{ if .Params.external }} <span class="card-external"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> {{ .Params.source }}</span>{{ end }}</h2>
     <div class="card-main">
       {{- with $meta.image }}
       <img class="card-thumb" src="{{ . }}" alt="" loading="lazy">

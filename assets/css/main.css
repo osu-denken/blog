@@ -149,3 +149,4 @@ ul.cardlist, .search-results { display: grid; grid-template-columns: repeat(2, m
 /* 一覧カードの本文の余白は 0 */
 .card-body { padding: 0; }
 .private-edit { margin-left: 0.75rem; color: var(--link); white-space: nowrap; }
+.card-external { margin-left: 0.5rem; color: var(--text-muted); font-size: 0.8rem; font-weight: normal; }
