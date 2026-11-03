@@ -139,3 +139,6 @@ ul.cardlist, .search-results { display: grid; grid-template-columns: repeat(2, m
 .card-edit[hidden] { display: none; }
 /* カード全体をクリックできる（タイトルのリンクをカード全体に広げる）。編集ボタンとタグは別に押せる */
 .card-title a::after { content: ""; position: absolute; inset: 0; }
+
+/* フッターの RSS と JSON のアイコンの間を空ける */
+.footer-col-2 { display: flex; align-items: center; gap: 12px; }
