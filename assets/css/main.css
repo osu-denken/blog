@@ -14,6 +14,9 @@
   --danger: #ff6b6b;
 }
 
+/* hidden 属性は、display を指定する他のルールに負けないようにする */
+[hidden] { display: none !important; }
+
 /* ナビの管理ボタン（GitHub でログインしたときだけ出る） */
 .nav .nav-admin { display: flex; align-items: center; }
 .nav .nav-icon[hidden] { display: none; }
