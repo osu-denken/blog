@@ -1,9 +1,8 @@
+title = "電研ブログ"
 baseURL = "https://osu-denken.net/denken-hugo/"
 languageCode = "ja"
 timeZone = "Asia/Tokyo"
-# OGP などの外部の取得は遅いことがあるため、既定の 30 秒を超えないようにする
 timeout = "5m"
-title = "電研ブログ"
 enableRobotsTXT = true
 
 [pagination]
@@ -62,7 +61,7 @@ enableRobotsTXT = true
   headerTitle = "電研"
   # 公式サイト（ログインのトークンは、このサイトと同じ origin に保存される）
   officialURL = "https://osu-denken.net/"
-  author = "大阪産業大学 文化会 電子計算研究部"
+  author = "電子計算研究部"
 
 # サイドバーのリンク（URL が空なら出さない）
 [[params.links]]
