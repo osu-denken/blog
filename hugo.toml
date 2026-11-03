@@ -25,6 +25,10 @@ enableRobotsTXT = true
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
 
+# ファイル名の先頭の日付（2025-07-23-tailscale.md）から日付と URL の名前を取る（Jekyll と同じ）
+[frontmatter]
+  date = [":filename", ":default"]
+
 # 記事はフォルダではなくファイル（/2025/07/23/tailscale.html）で出す
 [uglyURLs]
   posts = true
@@ -52,6 +56,7 @@ enableRobotsTXT = true
 # 管理画面（gh-admin）の設定。記事リポジトリが決まるまで架空のリポジトリを指す
 [params.ghAdmin]
   repo = "owner/denken-test-articles"
+  postURL = "/{yyyy}/{mm}/{dd}/{name}.html"
   branch = "main"
 
 [[module.imports]]
