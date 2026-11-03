@@ -38,6 +38,8 @@ function createPrivateCard(post) {
 async function applyPrivatePosts() {
   const list = document.querySelector('.cardlist');
   if (!list) return;
+  // 非公開記事は 1 ページ目だけに出す（2 ページ目以降には出さない）
+  if (list.dataset.page && list.dataset.page !== '1') return;
 
   const data = await fetchPrivate('/private-posts/list');
   if (!data || !data.posts.length) return;

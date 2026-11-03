@@ -5,7 +5,7 @@
 </form>
 {{- $pag := .Paginate (where site.RegularPages "Section" "posts") }}
 {{ partial "pagination.html" $pag }}
-<ul class="cardlist" data-pending-target="list">
+<ul class="cardlist" data-pending-target="list" data-page="{{ $pag.PageNumber }}">
   {{- range $pag.Pages }}
   {{ partial "post-card.html" . }}
   {{- end }}
