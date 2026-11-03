@@ -24,30 +24,10 @@ function applyThemeToggle() {
   });
 }
 
-// 編集画面のURL。非公開記事はブログとは別のエディタで扱う
-function editHref() {
-  const path = window.location.pathname;
-
-  if (path.startsWith('/blog/private')) {
-    const slug = new URLSearchParams(window.location.search).get('page');
-    return slug ? '/portal/private/?page=' + encodeURIComponent(slug) : null;
-  }
-
-  let pagename = path.replace(/^\/blog\//, '');
-
-  if (pagename.endsWith('.html')) {
-    pagename = pagename.replace(/\//g, '-').replace(/\.html$/, '');
-  } else {
-    pagename = '_' + pagename;
-  }
-
-  return '/portal/blog/?action=edit&page=' + encodeURIComponent(pagename);
-}
 
 // ログインしているときの処理
 function applyUserNav() {
   const login = document.getElementById('nav-login');
-  const join = document.getElementById('nav-join');
 
   // ナビバーの書き換え
   const loginLink = login.getElementsByTagName('a')[0];
@@ -60,27 +40,6 @@ function applyUserNav() {
     window.location.reload();
   });
   loginLink.textContent = 'ログアウト';
-
-  if (!window.location.pathname.endsWith('/blog/') && !window.location.pathname.endsWith('/blog/index.html')) {
-    const editLink = join.getElementsByTagName('a')[0];
-    const href = editHref();
-
-    // スラッグの無い非公開記事のページには編集するものがない
-    if (!href) {
-      join.remove();
-      return;
-    }
-
-    editLink.href = href;
-    editLink.textContent = '✎';
-    editLink.title = 'このページを編集';
-    return;
-  } else {
-    const newLink = join.getElementsByTagName('a')[0];
-    newLink.href = '/portal/blog/?action=new';
-    newLink.textContent = '＋';
-    newLink.title = '新しく投稿';
-  }
 }
 
 
