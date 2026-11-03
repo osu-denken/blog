@@ -124,7 +124,9 @@ ul.cardlist, .search-results { display: grid; grid-template-columns: repeat(2, m
 @media (max-width: 640px) { ul.cardlist, .search-results { grid-template-columns: minmax(0, 1fr); } }
 .carditem { position: relative; display: flex; flex-direction: column; margin: 0; background-color: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; overflow: hidden; transition: all 0.3s ease; }
 .carditem:hover { border-color: var(--card-accent); }
-.card-thumb { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; object-fit: cover; flex: none; }
+.carditem.has-thumb { flex-direction: row; }
+.card-thumb { display: block; width: 34%; max-width: 160px; height: auto; align-self: stretch; object-fit: cover; flex: none; }
+@media (max-width: 640px) { .card-thumb { width: 96px; } }
 .card-body { display: flex; flex-direction: column; flex: 1; min-width: 0; padding: 14px 18px 16px; }
 .card-meta { display: flex; align-items: baseline; gap: 8px; font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 6px; }
 .card-category { margin-left: auto; text-align: right; }
