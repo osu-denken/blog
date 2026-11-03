@@ -3,7 +3,6 @@ name: build
 on:
   push:
     branches: [main]
-  pull_request:
   workflow_dispatch:
   # 記事リポジトリ（denken-articles）の更新で起動する
   repository_dispatch:
@@ -15,13 +14,16 @@ permissions:
   id-token: write
 
 concurrency:
-  group: build-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,12 +36,6 @@ jobs:
           path: posts
           fetch-depth: 1
           persist-credentials: false
-
-      # Hugo Modules の取り込みに Go が要る（版は go.mod の go 行に合わせる）
-      - uses: actions/setup-go@v5
-        with:
-          go-version-file: go.mod
-          cache-dependency-path: go.sum
 
       - uses: peaceiris/actions-hugo@v3
         with:
@@ -60,14 +56,5 @@ jobs:
         with:
           path: public
 
-  deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: build
-    runs-on: ubuntu-24.04
-    timeout-minutes: 10
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
