@@ -142,3 +142,6 @@ ul.cardlist, .search-results { display: grid; grid-template-columns: repeat(2, m
 
 /* フッターの RSS と JSON のアイコンの間を空ける */
 .footer-col-2 { display: flex; align-items: center; gap: 12px; }
+
+/* 一覧カードの本文の余白は 0 */
+.card-body { padding: 0; }
