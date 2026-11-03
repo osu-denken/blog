@@ -8,17 +8,6 @@
   --link: #0b5cad;
   --danger: #b00020;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --background: #111;
-    --foreground: #eee;
-    --foreground-rgb: 238, 238, 238;
-    --text-primary: #eee;
-    --text-secondary: #aaa;
-    --border: #333;
-    --link: #7ab8ff;
-  }
-}
 body { margin: 0; font-family: sans-serif; color: var(--foreground); background: var(--background); line-height: 1.7; }
 .header-inner, .layout { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
@@ -183,7 +172,7 @@ body { margin: 0; font-family: sans-serif; color: var(--foreground); background:
     --nav-hover: #3a3a3a;
   }
 }
-:root[data-theme="dark"] {
+:root.dark, :root[data-theme="dark"] {
   --bg: #121212;
   --text: #fff;
   --text-muted: #ccc;
@@ -255,3 +244,27 @@ blockquote { color: var(--quote-text); border-left: 3px solid var(--border); }
 .term-list li { border-bottom-color: var(--border); }
 .pager a { color: var(--link); }
 .pager a:hover { color: var(--card-accent); }
+
+/* kmmz.jp 風のタイトル・ナビ・フッター・切り替えボタン */
+.dark {
+
+  --background: #111;
+  --foreground: #eee;
+  --foreground-rgb: 238, 238, 238;
+  --text-primary: #eee;
+  --text-secondary: #aaa;
+  --border: #333;
+  --link: #7ab8ff;
+}
+.title, .header .title { font-family: "Orbitron", "Geist", sans-serif; font-weight: bold; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--nav-text); }
+.header-inner { max-width: 1000px; }
+.header-actions a { display: inline-flex; align-items: center; gap: 4px; }
+.header-actions .fa-solid { font-size: 1rem; }
+.footer { max-width: 1000px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.footer-feeds { display: inline-flex; gap: 12px; }
+.footer-feeds a { font-size: 1.1rem; color: var(--text-muted); }
+.footer-feeds a:hover { color: var(--text); }
+.options { position: fixed; bottom: 1rem; right: 1rem; z-index: 1000; }
+.options button { display: flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; padding: 0; background: rgba(127, 127, 127, 0.2); border: 1px solid var(--border); border-radius: 50%; cursor: pointer; backdrop-filter: blur(3px); }
+.options .icon { font-size: 1.5rem; color: var(--text); opacity: 0.75; transition: all 0.3s ease-in-out; }
+.options button:hover .icon { opacity: 1; }
