@@ -116,18 +116,34 @@
   .sidebar { position: sticky; top: calc(var(--nav-height) + 1rem); align-self: start; }
 }
 
-/* 一覧カード: サムネイル・カテゴリ・タグ */
-.carditem.has-thumb { display: flex; gap: 16px; align-items: flex-start; }
+
+/* 一覧カード（denken-blog の carditem。表示項目はサムネイル・カテゴリ・タグ・概要） */
+.carditem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+.carditem:hover { border-color: var(--card-accent); }
+.carditem.has-thumb { flex-direction: row; gap: 16px; align-items: flex-start; }
 .card-thumb { flex: none; width: 96px; height: 96px; object-fit: cover; border-radius: 8px; }
-.card-body { flex: 1; min-width: 0; }
+.card-body { flex: 1; min-width: 0; padding-right: 36px; }
+.card-meta { font-size: 0.9rem; color: var(--text-subtle); }
 .card-category { margin-left: 0.5em; }
-.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.card-title { font-size: 1.2rem; font-weight: bold; color: var(--heading); margin: 6px 0 10px; line-height: 1.5; }
+.card-title a { color: var(--heading); text-decoration: none; }
+.card-excerpt { font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 12px; }
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 .card-tags .chip { font-size: 0.8rem; padding: 2px 8px; border: 1px solid var(--card-border); border-radius: 999px; color: var(--text-muted); text-decoration: none; }
 .card-tags .chip:hover { border-color: var(--card-accent); color: var(--card-accent); }
-@media (max-width: 600px) { .card-thumb { width: 72px; height: 72px; } }
-
-/* 一覧カードは全体をクリックできる（タイトルのリンクをカード全体に広げる）。編集ボタンとタグは別に押せる */
-.carditem { position: relative; }
+.card-edit { position: absolute; top: 16px; right: 16px; color: var(--text-subtle); }
+.card-edit[hidden] { display: none; }
+/* カード全体をクリックできる（タイトルのリンクをカード全体に広げる）。編集ボタンとタグは別に押せる */
 .card-title a::after { content: ""; position: absolute; inset: 0; border-radius: 10px; }
-.carditem:hover .card-title a { text-decoration: underline; }
-.card-edit, .card-tags .chip { position: relative; z-index: 1; }
+.card-edit, .card-tags .chip { z-index: 1; }
+@media (max-width: 600px) { .card-thumb { width: 72px; height: 72px; } }
