@@ -1,17 +1,28 @@
-<header class="header">
-  <div class="header-inner">
-    <a class="title" href="{{ "/" | relURL }}">{{ site.Params.headerTitle | default site.Title }}</a>
-    <div class="header-actions">
-      <a class="icon-button" href="{{ "/search/" | relURL }}" aria-label="検索" title="検索">検索</a>
-      <a class="icon-button" href="{{ "/tags/" | relURL }}">タグ</a>
-      <a class="icon-button" href="{{ "/categories/" | relURL }}">カテゴリ</a>
+<nav class="nav">
+  <ul>
+    <li>
+      <a href="https://osu-denken.github.io"><img src="/icon.png" alt="電研ロゴ">電研</a>
+    </li>
+    <li class="right">
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="テーマを切り替え" title="テーマを切り替え">
+        <i class="fa-solid fa-sun theme-icon theme-icon-light" aria-hidden="true"></i>
+        <i class="fa-solid fa-moon theme-icon theme-icon-dark" aria-hidden="true"></i>
+      </button>
+    </li>
+    {{- /* GitHub でログインしたときだけ出る管理画面のボタン（hugo-gh-admin） */}}
+    <li class="nav-admin">
       {{- if and (eq .Kind "page") (eq .Section "posts") }}
-      {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "icon-button") }}
+      {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "nav-icon") }}
       {{- end }}
-      {{ partial "gh-admin/button.html" (dict "kind" "new" "page" . "class" "icon-button") }}
-      {{ partial "gh-admin/button.html" (dict "kind" "admin" "page" . "class" "icon-button") }}
-      {{ partial "gh-admin/button.html" (dict "kind" "login" "page" . "class" "icon-button") }}
-      {{ partial "gh-admin/button.html" (dict "kind" "logout" "page" . "class" "icon-button") }}
-    </div>
-  </div>
-</header>
+      {{ partial "gh-admin/button.html" (dict "kind" "new" "page" . "class" "nav-icon") }}
+      {{ partial "gh-admin/button.html" (dict "kind" "admin" "page" . "class" "nav-icon") }}
+      {{ partial "gh-admin/button.html" (dict "kind" "logout" "page" . "class" "nav-icon") }}
+    </li>
+    <li id="nav-join">
+      <a href="{{ "join.html" | relURL }}">入部</a>
+    </li>
+    <li id="nav-login">
+      <a href="https://osu-denken.github.io/?i=blog{{ strings.TrimPrefix "/blog" .RelPermalink }}#login">ログイン</a>
+    </li>
+  </ul>
+</nav>

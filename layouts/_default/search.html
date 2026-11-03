@@ -1,10 +1,11 @@
 {{ define "main" }}
 <h1 class="page-title">{{ .Title }}</h1>
-<form id="search-form" class="search-box" action="{{ "/search/" | relURL }}" method="get" role="search">
-  <input id="q" type="search" name="q" aria-label="検索キーワード" placeholder="タイトル、タグ、本文から検索" autocomplete="off">
+<form id="search-form" class="search-box" action="{{ "search.html" | relURL }}" method="get" role="search">
+  <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+  <input id="q" type="search" name="q" class="search-input" aria-label="記事を検索" placeholder="記事を検索..." autocomplete="off" autofocus>
 </form>
-<p id="search-count" class="card-meta" aria-live="polite"></p>
-<div id="search-results" class="card-list" data-index-url="{{ "index.json" | relURL }}"></div>
+<p id="search-count" class="search-hint" aria-live="polite"></p>
+<div id="search-results" class="search-results" data-index-url="{{ "index.json" | relURL }}"></div>
 {{ end }}
 
 {{ define "scripts" }}

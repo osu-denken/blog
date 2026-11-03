@@ -1,0 +1,49 @@
+/* minima テーマの基本（denken-blog の土台）。本文の幅・余白・見出し・フッター */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure { margin: 0 0 15px; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+ul, ol { margin-left: 30px; padding: 0; }
+li > ul, li > ol { margin-bottom: 0; }
+img { max-width: 100%; vertical-align: middle; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+blockquote { border-left: 4px solid; padding-left: 15px; font-size: 1.1rem; letter-spacing: -1px; font-style: italic; }
+pre, code { font-size: 0.9375em; border: 1px solid; border-radius: 3px; }
+code { padding: 1px 5px; }
+pre { padding: 8px 12px; overflow-x: auto; }
+pre > code { border: 0; padding-right: 0; padding-left: 0; }
+table { margin-bottom: 30px; text-align: left; border-collapse: collapse; border: 1px solid; }
+table th, table td { padding: 10px 15px; border: 1px solid; }
+hr { border: 0; border-top: 1px solid; margin: 20px 0; }
+
+.container { flex: 1; }
+.page-content { padding: 30px 0; }
+.wrapper { max-width: 800px; margin-right: auto; margin-left: auto; padding-right: 30px; padding-left: 30px; }
+@media screen and (max-width: 800px) {
+  .wrapper { padding-right: 15px; padding-left: 15px; }
+}
+
+.site-footer { border-top: 1px solid; padding: 30px 0; }
+.footer-heading { font-size: 1.1rem; margin-bottom: 15px; }
+.contact-list { list-style: none; margin-left: 0; }
+.footer-col-wrapper { font-size: 0.9375rem; margin-left: -15px; display: flex; flex-wrap: wrap; }
+.footer-col { padding-left: 15px; margin-bottom: 15px; }
+.footer-col-1 { width: calc(35% - 15px); }
+.footer-col-2 { width: calc(20% - 15px); }
+.footer-col-3 { width: calc(45% - 15px); }
+@media screen and (max-width: 600px) {
+  .footer-col { width: calc(100% - 15px); }
+}

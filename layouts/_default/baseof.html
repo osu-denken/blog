@@ -5,19 +5,22 @@
 </head>
 <body>
   {{ partial "header.html" . }}
-  <div class="layout">
-    <main class="contents">
-      {{ block "main" . }}{{ end }}
+  <div class="container">
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ block "main" . }}{{ end }}
+      </div>
     </main>
+    {{- if and .IsPage (not .Params.hide.rightbar) }}
+    {{- $toc := .TableOfContents | replaceRE `</?nav[^>]*>` "" }}
+    {{- if findRE `<li` $toc }}
+    <aside class="rightbar">{{ $toc | safeHTML }}</aside>
+    {{- end }}
+    {{- end }}
   </div>
   {{ partial "footer.html" . }}
-  <div class="options">
-    <button type="button" id="theme-toggle" aria-label="ダークモードを切り替える" title="ダークモードを切り替える">
-      <i class="fa-solid fa-moon icon" aria-hidden="true"></i>
-    </button>
-  </div>
-  <script src="{{ "js/theme.js" | relURL }}" type="module"></script>
   {{ partial "pending-templates.html" . }}
+  <script src="{{ "js/denken/main.js" | relURL }}"></script>
   {{ block "scripts" . }}{{ end }}
 </body>
 </html>

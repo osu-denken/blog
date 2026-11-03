@@ -1,11 +1,19 @@
 {{ define "main" }}
+<form class="search-box" action="{{ "search.html" | relURL }}" method="get" role="search">
+  <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+  <input type="search" name="q" class="search-input" placeholder="記事を検索..." aria-label="記事を検索" autocomplete="off">
+</form>
 {{- $pag := .Paginate (where site.RegularPages "Section" "posts") }}
-<div class="card-list" data-pending-target="list">
+{{ partial "pagination.html" $pag }}
+<ul class="cardlist" data-pending-target="list">
   {{- range $pag.Pages }}
-    {{- partial "post-card.html" . }}
-  {{- else }}
-    <p>記事はまだありません。</p>
+  {{ partial "post-card.html" . }}
   {{- end }}
-</div>
-{{ partial "pager.html" $pag }}
+</ul>
+{{ partial "pagination.html" $pag }}
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/denken/private-api.js" | relURL }}"></script>
+<script src="{{ "js/denken/private-list.js" | relURL }}"></script>
 {{ end }}

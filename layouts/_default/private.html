@@ -1,0 +1,17 @@
+{{ define "main" }}
+<h1>
+  <i class="card-lock fa-solid fa-lock" title="非公開記事" aria-hidden="true"></i>
+  <span id="private-title">非公開記事</span>
+</h1>
+<div class="post-meta">
+  <span id="private-meta"></span>
+</div>
+<div id="private-body" class="post-body">読み込み中...</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "lib/marked.min.js" | relURL }}"></script>
+<script src="{{ "lib/purify.min.js" | relURL }}"></script>
+<script src="{{ "js/denken/private-api.js" | relURL }}"></script>
+<script src="{{ "js/denken/private-view.js" | relURL }}"></script>
+{{ end }}

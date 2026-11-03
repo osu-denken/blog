@@ -1,9 +1,8 @@
-<article class="carditem">
-  <div class="card-body">
-    <div class="card-meta">
-      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006.01.02" }}</time>
-    </div>
-    <h2 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-  </div>
+<li class="carditem">
+  <a href="{{ .RelPermalink }}">
+    <span class="card-title">{{ .Title }}</span>
+    <p class="card-excerpt">{{ .Plain | truncate 50 }}</p>
+    <span class="card-date">{{ .Date.Format "2006-01-02" }}</span>
+  </a>
   {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "card-edit" "label" "編集") }}
-</article>
+</li>

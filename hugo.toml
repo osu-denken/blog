@@ -23,7 +23,11 @@ enableRobotsTXT = true
 
 # 記事の URL は Jekyll のときと同じ形（/2025/07/23/tailscale.html）
 [permalinks]
-  posts = "/:year/:month/:day/:slug.html"
+  posts = "/:year/:month/:day/:slug/"
+
+# 記事はフォルダではなくファイル（/2025/07/23/tailscale.html）で出す
+[uglyURLs]
+  posts = true
 
 [markup.goldmark.extensions]
   linkify = true
@@ -43,6 +47,7 @@ enableRobotsTXT = true
 [params]
   description = "大阪産業大学 文化会 電子計算研究部の公式ブログ。活動報告や制作物、部員による発信をしています。"
   headerTitle = "電研"
+  author = "大阪産業大学 文化会 電子計算研究部"
 
 # 管理画面（gh-admin）の設定。記事リポジトリが決まるまで架空のリポジトリを指す
 [params.ghAdmin]

@@ -1,0 +1,44 @@
+{{- /* 引数はページネーター。現在ページの前後 2 件を出し、離れたページは省略記号でたたむ */ -}}
+{{- $p := . -}}
+{{- if gt $p.TotalPages 1 -}}
+{{- $cur := $p.PageNumber -}}
+{{- $total := $p.TotalPages -}}
+{{- $ws := sub $cur 2 -}}{{- if lt $ws 1 }}{{ $ws = 1 }}{{ end -}}
+{{- $we := add $cur 2 -}}{{- if gt $we $total }}{{ $we = $total }}{{ end -}}
+<nav class="pagination" aria-label="ページ送り">
+  {{- if $p.HasPrev }}
+  <a class="pagination-btn" href="{{ $p.First.URL }}" aria-label="最初のページ"><i class="fa-solid fa-angles-left" aria-hidden="true"></i></a>
+  <a class="pagination-btn" href="{{ $p.Prev.URL }}" rel="prev" aria-label="前のページ"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></a>
+  {{- else }}
+  <span class="pagination-btn is-disabled" aria-hidden="true"><i class="fa-solid fa-angles-left"></i></span>
+  <span class="pagination-btn is-disabled" aria-hidden="true"><i class="fa-solid fa-chevron-left"></i></span>
+  {{- end }}
+  <span class="pagination-pages">
+    {{- if gt $ws 1 }}
+    <a class="pagination-num" href="{{ $p.First.URL }}" aria-label="1ページ目">1</a>
+    {{- if gt $ws 2 }}<span class="pagination-gap" aria-hidden="true">…</span>{{ end }}
+    {{- end }}
+    {{- range $p.Pagers }}
+    {{- if and (ge .PageNumber $ws) (le .PageNumber $we) }}
+    {{- if eq .PageNumber $cur }}
+    <span class="pagination-num is-current" aria-current="page" aria-label="{{ .PageNumber }}ページ目">{{ .PageNumber }}</span>
+    {{- else }}
+    <a class="pagination-num" href="{{ .URL }}" aria-label="{{ .PageNumber }}ページ目">{{ .PageNumber }}</a>
+    {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- if lt $we $total }}
+    {{- if lt $we (sub $total 1) }}<span class="pagination-gap" aria-hidden="true">…</span>{{ end }}
+    <a class="pagination-num" href="{{ $p.Last.URL }}" aria-label="{{ $total }}ページ目">{{ $total }}</a>
+    {{- end }}
+  </span>
+  {{- if $p.HasNext }}
+  <a class="pagination-btn" href="{{ $p.Next.URL }}" rel="next" aria-label="次のページ"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+  <a class="pagination-btn" href="{{ $p.Last.URL }}" aria-label="最後のページ"><i class="fa-solid fa-angles-right" aria-hidden="true"></i></a>
+  {{- else }}
+  <span class="pagination-btn is-disabled" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+  <span class="pagination-btn is-disabled" aria-hidden="true"><i class="fa-solid fa-angles-right"></i></span>
+  {{- end }}
+</nav>
+<p class="pagination-status">{{ $total }} ページ中 {{ $cur }} ページ目（全 {{ $p.TotalNumberOfElements }} 件）</p>
+{{- end -}}

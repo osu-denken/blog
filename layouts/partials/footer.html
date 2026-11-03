@@ -1,8 +1,21 @@
-<footer class="footer">
-  <span>{{ site.Title }}</span>
-  <span class="footer-feeds">
-    <a href="{{ "index.xml" | relURL }}" aria-label="RSS" title="RSS"><i class="fa-solid fa-rss" aria-hidden="true"></i></a>
-    <a href="{{ "index.json" | relURL }}" aria-label="JSON" title="JSON"><i class="fa-solid fa-code" aria-hidden="true"></i></a>
-  </span>
-  {{ partial "gh-admin/button.html" (dict "kind" "footer" "page" .) }}
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.Title }}</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">{{ site.Params.author | default site.Title }}</li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <a class="footer-rss" href="{{ "feed.xml" | relURL }}" type="application/rss+xml" title="RSS" aria-label="RSS">
+          <i class="fa-solid fa-rss" aria-hidden="true"></i>
+        </a>
+        {{ partial "gh-admin/button.html" (dict "kind" "footer" "page" .) }}
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>{{ site.Params.description }}</p>
+      </div>
+    </div>
+  </div>
 </footer>
