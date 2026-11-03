@@ -16,6 +16,36 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{- /* OGP（X・Discord などのリンクの見た目）。記事はタイトル・概要・画像、それ以外はサイトの既定。画像は絶対 URL にする */ -}}
+{{- $ogTitle := site.Title -}}
+{{- $ogDesc := site.Params.description -}}
+{{- $ogImage := site.Params.ogImage | default "" -}}
+{{- if and .IsPage (eq .Section "posts") -}}
+  {{- $m := partialCached "external-meta.html" . .File.Path -}}
+  {{- $ogTitle = $m.title -}}
+  {{- with $m.summary }}{{ $ogDesc = . }}{{ end -}}
+  {{- with $m.image }}{{ $ogImage = . }}{{ end -}}
+{{- else if .IsPage -}}
+  {{- $ogTitle = .Title -}}
+  {{- with .Description }}{{ $ogDesc = . }}{{ end -}}
+{{- end -}}
+{{- if and $ogImage (hasPrefix $ogImage "/") (not (hasPrefix $ogImage "//")) -}}
+  {{- $base := urls.Parse site.BaseURL -}}
+  {{- $ogImage = printf "%s://%s%s" $base.Scheme $base.Host $ogImage -}}
+{{- end }}
+<meta property="og:type" content="{{ if and .IsPage (eq .Section "posts") }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $ogDesc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="{{ if $ogImage }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+<meta name="twitter:description" content="{{ $ogDesc }}">
+{{- with $ogImage }}
+<meta property="og:image" content="{{ . }}">
+<meta name="twitter:image" content="{{ . }}">
+{{- end }}
 {{- with .Params.robots }}
 <meta name="robots" content="{{ . }}">
 {{- end }}
