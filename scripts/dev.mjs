@@ -28,7 +28,7 @@ if (adminDir) {
 
 const server = spawn(
   'hugo',
-  ['server', '--port', '1323', '--baseURL', 'http://localhost:1323/', '--disableFastRender', '--navigateToChanged'],
+  ['server', '--port', '1323', '--baseURL', 'http://localhost:1323/blog/', '--disableFastRender', '--navigateToChanged'],
   { cwd: root, env, stdio: 'inherit' },
 );
 server.on('exit', (code) => process.exit(code ?? 0));
