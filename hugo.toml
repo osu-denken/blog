@@ -51,6 +51,8 @@ enableRobotsTXT = true
 [params]
   description = "大阪産業大学 文化会 電子計算研究部の公式ブログ。活動報告や制作物、部員による発信をしています。"
   headerTitle = "電研"
+  # 公式サイト（ログインのトークンは、このサイトと同じ origin に保存される）
+  officialURL = "https://osu-denken.net/"
   author = "大阪産業大学 文化会 電子計算研究部"
 
 # サイドバーのリンク（URL が空なら出さない）

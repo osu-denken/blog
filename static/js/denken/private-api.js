@@ -9,7 +9,7 @@ function privatePostUrl(slug) {
 // ログインし直したあとに戻ってくる先。公式サイトのログイン処理が ?i= を見る
 function redirectToLogin() {
   const returnTo = window.location.pathname.replace(/^\//, '') + window.location.search;
-  window.location.href = 'https://osu-denken.github.io/?i=' + encodeURIComponent(returnTo) + '#login';
+  window.location.href = 'https://osu-denken.net/?i=' + encodeURIComponent(returnTo) + '#login';
 }
 
 /**
