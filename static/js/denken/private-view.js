@@ -10,6 +10,11 @@ function renderPrivatePost(post) {
 
   const body = document.getElementById('private-body');
   body.innerHTML = DOMPurify.sanitize(marked.parse(post.content));
+
+  // 非公開記事の編集はポータルで行う（権限の確認はポータル側）
+  const edit = document.getElementById('private-edit');
+  edit.href = '/portal/private/?page=' + encodeURIComponent(new URLSearchParams(window.location.search).get('page'));
+  edit.hidden = false;
 }
 
 function showPrivateMessage(message) {
