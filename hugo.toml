@@ -62,6 +62,8 @@ enableRobotsTXT = true
   # 公式サイト（ログインのトークンは、このサイトと同じ origin に保存される）
   officialURL = "https://osu-denken.net/"
   author = "電子計算研究部"
+  # front matter に author が無い記事に出す GitHub のユーザー名
+  defaultAuthor = "osu-denken"
   # フッターに出す名前（サイドバーの名前とは別）
   footer = "大阪産業大学 文化会 電子計算研究部"
 
