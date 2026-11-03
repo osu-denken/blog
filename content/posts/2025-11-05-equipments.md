@@ -1,0 +1,337 @@
+---
+title: "部室の機器など"
+date: 2025-11-05
+lastmod: 2025-12-19
+slug: "equipments"
+author: osu-denken
+tags: [マニュアル]
+---
+
+
+何があるのかを一度再確認して把握するため、部室に置いてある機器、ケーブルなどを一覧としてまとめました。<br>
+ここではそれぞれいくつあるのかも記載しておくといいでしょう。
+
+11/26時点での情報です。
+
+## コンピュータ類
+### デスクトップ 1 (denken-pc-1)
+![デスクトップパソコン-1](https://osu-denken.github.io/blog/images/2025-11-06-pc-1.png)
+
+- CPU: [Intel Core i5 12600K](https://www.intel.co.jp/content/www/jp/ja/products/sku/134589/intel-core-i512600k-processor-20m-cache-up-to-4-90-ghz/specifications.html) (3.7GHz, 10コア16スレッド, L1Cache-864KB L2Cache-9.5MB L3Cache-20MB)
+- メモリ: 32GB (16GBx2, DDR5-4800 2400MHz, [ADATA](https://www.adata.com/jp/consumer/category/computer-memory/dram-module-ddr5-4800-u-dimm/))
+- ストレージ: SSD 1TB (Samsung SSD 980 PRO 1TB)
+- マザーボード: [ASUS ROG STRIX Z690-F GAMING WIFI](https://rog.asus.com/jp/motherboards/rog-strix/rog-strix-z690-f-gaming-wifi-model/)
+- グラフィックス: [MSI NVIDIA GeForce RTX 4060](https://jp.msi.com/Graphics-Card/GeForce-RTX-4060-GAMING-X-8G) (GPU 3072コア 2490MHz, VRAM 8GB GDDR6 8500MHz, )
+- 無線NIC: Intel Wi-Fi 6E AX210 160MHz
+- OS: Windows 11 Pro
+
+イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
+
+### デスクトップ 2 (denken-pc-2)
+![デスクトップパソコン-2](https://osu-denken.github.io/blog/images/2025-11-06-pc-2.png)
+
+- CPU: [AMD Ryzen 7 9800X3D](https://www.amd.com/ja/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9800x3d.html) (4.7GHz, 8コア16スレッド, L1Cache-640KB L2Cache-8MB L3Cache-96MB)
+- メモリ: 32GB (16GBx2, DDR5-5600 2800MHz, 未調査)
+- ストレージ: SSD 1TB (未調査)
+- マザーボード: 未調査
+- グラフィックス: NVIDIA GeForce RTX 3090 Ti, AMD Radeon Graphics (未調査)
+- 無線NIC: あり
+- OS: Windows 11 Pro
+
+イーサネットでの利用のためWi-Fiは利用可能であるが、通常は無効にしている。
+
+### デスクトップ 3 (denken-pc-3)
+![デスクトップパソコン-3](https://osu-denken.github.io/blog/images/2025-11-08-pc-3.png)
+
+- CPU: Intel Core i7 8700 (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 32GB (16GBx2, DDR4-3602 1801MHz, G.Skil)
+- ストレージ: 2.4TB (未調査)
+- マザーボード: ASUS PRIME Z390M-PLUS
+- グラフィックス: GIGABYTE NVIDIA GeForce GTX 1660 (GPU 1530MHz, VRAM 6GB GDDR5 4001MHz)
+- 無線NIC: 未調査
+- OS: Windows 11 Home
+
+### デスクトップ 4 (denken-pc-4)
+![デスクトップパソコン-4](https://osu-denken.github.io/blog/images/2025-11-06-pc-4.png)
+
+- CPU: Intel Core i7 8700 (3.2GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 16GB (8GBx2, DDR4-2666 1333 MHz)
+- ストレージ: 3.4TB (未調査)
+- マザーボード: MSI H370 GAMING PLUS (MS-7B22)
+- グラフィックス: NVIDIA GeForce GTX 1050 Ti
+- 無線NIC: 未調査
+- OS: Windows 11 Pro, ArchLinux (デュアルブート)
+
+ライセンスはWindows 11 Home となっており、異なったライセンスのWindowsが入っているため再度インストールすることを推奨
+
+### コンピュータ 5 (denken-pc-5)
+![CP-5](https://osu-denken.github.io/blog/images/2025-11-08-mc-sv.png)
+
+- CPU: Intel Core i7 4930K (3.4GHz, 6コア12スレッド, L1Cache-384KB L2Cache-1.5MB L3Cache-12MB)
+- メモリ: 16GB (4GBx4 DDR3)
+- ストレージ: SSD 500GB
+- マザーボード: ASUS P9X79 Pro
+- 無線NIC: なし
+- OS: Ubuntu
+
+大学祭用のマイクラサーバー、PaperMC を起動しています。メモリが6枚刺さっているのにも関わらず、4枚のみしか認識していない。
+
+### ミニPC 6 (denken-pc-6)
+![Intel Mac mini](https://osu-denken.github.io/blog/images/2025-11-21-intelmacmini.png)
+
+- CPU: Intel Core i3 8100B (3.6GHz, 4コア4スレッド, L1Cache-256KB L2Cache-1MB L3Cache-4MB)
+- GPU: Intel UHD Graphics 630
+- メモリ: 8GB (4GBx2 DDR4-2666)
+- ストレージ: SSD 128GB
+- マザーボード: APN 661-10223
+- 無線NIC: あり
+- OS: macOS 13
+
+現時点でHDMI入力切替機器により、デスクトップ 3 が接続されている ディスプレイ 3 と共用
+
+### デスクトップ 7 (denken-pc-7)
+
+### ミニPC 8 (denken-pc-8)
+
+
+### Raspberry Pi 4 Model B x2
+![ラズパイ-フタあり](https://osu-denken.github.io/blog/images/2025-11-06-raspi-1.png)
+![ラズパイフタなし](https://osu-denken.github.io/blog/images/2025-11-06-raspi-2.png)
+
+手のひらサイズの小型コンピュータです。LinuxであるDebianベースのRaspberry OSがインストールされています。
+大学祭の展示でScratchを用いたプログラミング体験に使いました。
+
+### サーバー x2
+- Dell PowerEdge R640 x2
+
+### 破損したサーバ ~~サーバ x3~~
+RAIDコントローラが壊れている可能性があります。
+
+![サーバー](https://osu-denken.github.io/blog/images/2025-11-08-sv.png)
+- Dell PowerEdge R630 x3<br>
+詳細は[部室サーバに関する情報など](https://osu-denken.github.io/blog/2025/10/30/club-sv.html) にて記載しています。
+
+- サーバーラック
+
+![サーバーラック](https://osu-denken.github.io/blog/images/2025-11-08-sv-rack.png)
+
+## ディスプレイ x7
+### KH275V (I-O DATA)
+![KH275V](https://osu-denken.github.io/blog/images/2025-11-08-KH275V.png)
+
+{{< link-card url="https://www.iodata.jp/product/lcd/wide/kh275v/index.htm" >}}
+
+- 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
+- 電源コネクタ: AC電源ケーブル (IEC 60320 C13)
+- 解像度: 1920x1080
+- リフレッシュレート: 60Hz → 最大60fps対応可
+- 表示色: 1,677万色
+- 種類: 27型ADSパネル (非光沢LED)
+- スピーカ: ステレオ
+- 音声入出: ステレオミニジャック
+- 電圧: AC100V
+- 消費電力: 通常16.7W 最大34W
+
+### FLATRON 24EA53VQ-P (LG)
+![FLATRON 24EA53VQ-P](https://osu-denken.github.io/blog/images/2025-11-06-FLATRON-24EA53VQ-P.png)
+
+{{< link-card url="https://www.lg.com/jp/monitors/fhd-qhd/24ea53vq-p/" >}}
+
+- 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
+- 電源コネクタ: DC電源ケーブル (IEC 60320 C13)
+- 解像度: 1920x1080
+- リフレッシュレート: 75Hz
+- 表示色: 1,677万色
+- 種類: 23.8型AH-IPSパネル (非光沢LED)
+- スピーカ: なし
+- 音声入出: ステレオミニジャック、マイク
+
+### FLATRON E2742V-BN (LG)
+![FLATRON E2742V-BN](https://osu-denken.github.io/blog/images/2025-11-08-flatron-e2742v-bn.png)
+
+{{< link-card url="https://www.lg.com/jp/monitors/fhd-qhd/e2742v-bn/" >}}
+
+- 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル
+- 電源コネクタ: DC電源ケーブル (IEC 60320 C13)
+- 解像度: 1920x1080
+- リフレッシュレート: 60Hz
+- 表示色: 1,677万色
+- 種類: 27型TNパネル (非光沢LED)
+- スピーカ: なし
+- 音声入出: ステレオミニジャック、マイク
+
+### VX207NE (ASUS)
+![VX207NE](https://osu-denken.github.io/blog/images/2025-11-08-vx207ne.png)
+
+{{< link-card url="https://www.asus.com/jp/displays-desktops/monitors/eye-care/vx207ne/" >}}
+
+- 映像コネクタ: DVIケーブル, VGAケーブル
+- 電源コネクタ: DC電源ケーブル
+- 解像度: 1366x768
+- リフレッシュレート: 75Hz
+- 表示色: 1,677万色
+- 種類: 19.5型TNパネル (非光沢LCD)
+- スピーカ: なし
+- 音声入出: なし
+
+### ProLite GE2488HS (iiyama)
+![ProLite-GE2488HS](https://osu-denken.github.io/blog/images/2025-11-08-prolite-ge2488hs.png)
+
+{{< link-card url="https://www.mouse-jp.co.jp/iiyama/support/download/manual/lcd/GE2488HS-usermanual-j.pdf?msockid=1602dc13a9b56bbb338bca92a8356ae9" >}}
+
+- 映像コネクタ: DVIケーブル, VGAケーブル
+- 電源コネクタ: AC電源ケーブル
+- 解像度: 1920x1080
+- リフレッシュレート: 75Hz
+- 表示色: 1,677万色
+- 種類: 24型TNパネル (非光沢LCD)
+- スピーカ: ステレオ
+- 音声入出: ステレオミニジャック (イヤホン, マイク)
+
+### PCVD-17SA1 (VAIO)
+![PCVD-17SA1](https://osu-denken.github.io/blog/images/2025-11-08-pcvd-17sa1.png)
+
+{{< link-card url="https://contents.sony.jp/support/vaio/download/man/4679244011.pdf" >}}
+
+- 映像コネクタ: VGA
+- 電源コネクタ: DC電源ケーブル
+- 解像度: 1280×1024
+- リフレッシュレート: 60Hz
+- 表示色: 1619万色
+- 種類: 17型TFTパネル (非光沢LCD)
+- スピーカ: なし
+- 音声入出: なし
+
+### AQUOS LC-22K9 テレビ (SHARP)
+![AQUOS](https://osu-denken.github.io/blog/images/2025-11-12-aquos.png)
+
+{{< link-card url="https://jp.sharp/support/aquos/product/lc22k9.html" >}}
+
+- 映像コネクタ: HDMIケーブル, DVIケーブル, VGAケーブル, RCAケーブル
+- その他コネクタ: LANケーブル, USBケーブル
+- 解像度: 1366×768
+- リフレッシュレート: 60Hz
+- 表示色: 1,677万色
+- 種類: 22型IPSパネル (非光沢LED)
+- スピーカ: ステレオ
+- 音声入出: ステレオミニジャック (イヤホン)
+
+## ケーブル類
+### LANケーブル
+![UTPケーブル-Cat5e](https://osu-denken.github.io/blog/images/2025-11-08-utp-cable.png)
+
+それぞれの機器をネットワークに繋げるためのケーブルです。LANケーブルの一つとしてUTPケーブルが多く使われています。
+
+### USBケーブル
+ほとんどのデバイスに使われている充電かつデータ転送用のケーブルです。
+
+### Lightningケーブル
+従来のiPhoneに使われていたケーブルです。
+
+### HDMIケーブル
+映像用のケーブルです。多くの場合、このHDMIが使われます。
+
+### VGAケーブル
+映像用のケーブルです。古めのコンピュータに使われていたものです。
+
+### DVIケーブル
+映像用のケーブルです。
+
+### DPケーブル
+映像用のケーブルです。
+
+### RCAケーブル/AVケーブル
+映像用のケーブルです。古めのゲーム機などに使われていたものです。
+
+## ネットワーク類
+### L2スイッチ/ルータ UNIVERGE IX2215 (NEC)
+![NEC IX2215](https://osu-denken.github.io/blog/images/2025-11-06-nec-ix2215.png)
+
+{{< link-card url="https://jpn.nec.com/univerge/ix/Info/ix2215.html" >}}
+
+- LANポート数 (合計): 10
+  - GE0: 1
+  - GE1: 1
+  - GE2 (L2SW): 8
+- その他コネクタ: USB, BRI(2B+1D)
+
+厳密にはスイッチングハブを内蔵したルータですが、ここでは利用用途、機能として表記しています。
+LANコネクタ（RJ-45コネクタ）がそこそこあるためスイッチとして利用しています。
+同ネットワーク内を有線で接続するために使います。
+
+ここから大学内のネットワーク（LEONET）を経由してインターネットを利用します。GE0のポートと大学のLANを接続します。
+
+GEとはGigabit EthernetのことでGE0、GE1、GE2はそれぞれ内部で物理的に独立したネットワークインターフェースを持っており、GE2はスイッチングハブのポートです。<br>
+同じネットワークに接続する場合、つまり、基本的にパソコンはL2スイッチであるGE2のポート、右側の上下8つのポートに挿し込みます。
+
+L2スイッチではポートベースVLAN機能(仮想LAN)があるため、GE2をより分割できます。
+
+USBメモリによる初期設定が可能です。<br>
+BRIは右から3つそれぞれ違った形状のポートですが、ISDNは現時点でほとんど廃止されているため、基本的には利用しません。
+
+### アクセスポインタ（ルータ）
+![アクセスポインタ](https://osu-denken.github.io/blog/images/2025-11-06-ap.png)
+
+本来はルータですが、無線機能（アクセスポインタ）のみを利用しているため、アクセスポインタとして表記しています。Wi-Fiを利用するためのものです。
+
+このアクセスポインタはL2スイッチに差し込んでいます。
+
+## パーツ類
+ここで記載されているパーツは未使用品、組立て済みでない余ったものや展示用といったものとなります。
+
+### CPU
+
+### メモリ
+- DDR2 512MB x2
+- DDR2 x2
+
+### SSD
+
+### HDD
+- 3.5インチHDD x2
+- 2.5インチHDD x12
+
+### グラフィックボード
+
+### マザーボード
+
+## 周辺機器類
+
+### マウス
+
+### キーボード
+
+### HDMI入力切替 x2
+HDMI接続の映像出力先のモニタをボタンで切り替えることができる機器です。
+
+### スピーカー
+ステレオミニジャックで音声入力します。
+
+### Webカメラ
+![webカメラ](https://osu-denken.github.io/blog/images/2025-11-08-webcamera.png)
+
+部会をするGoogle Meetに使われています。
+マイクが内蔵されています。
+
+### USBメモリ
+
+### プリンター DCP-J926N-B
+![プリンタ](https://osu-denken.github.io/blog/images/2025-11-06-printer.png)
+
+EPSON製のプリンターです。
+
+## スマートホーム類
+### SwitchBot ロック Pro
+締め忘れなどといった防犯対策のため、部室のドアの鍵の開閉をSwitchBotで管理しています。<br>
+部屋の開閉状態を検知して数秒後、自動で施錠します。
+
+### SwitchBot ハブミニ
+
+## 白物家電類
+### 電子レンジ
+
+### 冷蔵庫
+
+### ケトル
+
+### 掃除機

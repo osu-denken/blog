@@ -1,7 +1,7 @@
-baseURL = "https://example.org/"
+baseURL = "https://osu-denken.net/blog/"
 languageCode = "ja"
 timeZone = "Asia/Tokyo"
-title = "検証用のブログ"
+title = "電研ブログ"
 enableRobotsTXT = true
 
 [pagination]
@@ -13,6 +13,23 @@ enableRobotsTXT = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+# RSS は今の URL（/feed.xml）を保つ
+[outputFormats.RSS]
+  baseName = "feed"
+
+# 記事の URL は Jekyll のときと同じ形（/2025/07/23/tailscale.html）
+[permalinks]
+  posts = "/:year/:month/:day/:slug.html"
+
+[markup.goldmark.extensions]
+  linkify = true
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [markup.highlight]
   noClasses = false
@@ -24,11 +41,12 @@ enableRobotsTXT = true
     inline = [['\(', '\)']]
 
 [params]
-  description = "Hugo の検証用サイトです。"
-  headerTitle = "検証用のブログ"
+  description = "大阪産業大学 文化会 電子計算研究部の公式ブログ。活動報告や制作物、部員による発信をしています。"
+  headerTitle = "電研"
 
-# 管理画面（gh-admin）の設定。検証では架空のリポジトリを指し、実在の記事リポジトリには書き込まない
+# 管理画面（gh-admin）の設定。記事リポジトリが決まるまで架空のリポジトリを指す
 [params.ghAdmin]
+  repo = "owner/denken-test-articles"
   branch = "main"
 
 [[module.imports]]

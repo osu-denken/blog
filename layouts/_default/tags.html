@@ -1,0 +1,11 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+{{- range site.Taxonomies.tags.ByCount }}
+<h2 id="{{ .Name | urlize }}">{{ .Page.Title }}</h2>
+<ul>
+  {{- range .Pages }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{- end }}
+</ul>
+{{- end }}
+{{ end }}
