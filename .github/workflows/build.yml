@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # 記事リポジトリ（denken-articles）の更新で起動する
+  repository_dispatch:
+    types: [articles-updated]
 
 permissions:
   contents: read
@@ -58,7 +61,7 @@ jobs:
           path: public
 
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-24.04
     timeout-minutes: 10
