@@ -116,25 +116,6 @@
   .sidebar { position: sticky; top: calc(var(--nav-height) + 1rem); align-self: start; }
 }
 
-/* ヘッダー（blog.kmmz.jp と同じ作り。タイトルは左、操作は右） */
-.header { position: sticky; top: 0; z-index: 1000; height: 3.5rem; background-color: var(--bg); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; height: 100%; max-width: 1000px; margin: 0 auto; padding: 0 1.25rem; }
-.header .title { font-family: "Orbitron", "Geist", sans-serif; font-weight: bold; font-size: 1.35rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text); text-decoration: none; white-space: nowrap; }
-.header-actions { display: flex; align-items: center; gap: 0.25rem; }
-.header-actions .nav-text { color: var(--text); font-size: 1rem; padding: 0 0.5rem; text-decoration: none; }
-.header-actions .nav-text:hover { text-decoration: underline; color: var(--link); }
-.icon-button { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; border: none; border-radius: 50%; background: none; color: var(--text); cursor: pointer; text-decoration: none; }
-.icon-button:hover { background: rgba(127, 127, 127, 0.15); }
-.icon-button[hidden] { display: none; }
-.theme-toggle .theme-icon { display: inline-block; }
-.theme-toggle .theme-icon-dark { display: none; }
-.dark .theme-toggle .theme-icon-light, :root.dark .theme-toggle .theme-icon-light { display: none; }
-.dark .theme-toggle .theme-icon-dark, :root.dark .theme-toggle .theme-icon-dark { display: inline-block; }
-:root[data-theme="dark"] .theme-toggle .theme-icon-light { display: none; }
-:root[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline-block; }
-:root:not([data-theme="dark"]) .theme-toggle .theme-icon-dark { display: none; }
-:root:not([data-theme="dark"]) .theme-toggle .theme-icon-light { display: inline-block; }
-
 /* 一覧カード: サムネイル・カテゴリ・タグ */
 .carditem.has-thumb { display: flex; gap: 16px; align-items: flex-start; }
 .card-thumb { flex: none; width: 96px; height: 96px; object-fit: cover; border-radius: 8px; }
