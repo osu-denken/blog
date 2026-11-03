@@ -94,3 +94,6 @@
 .sidebar-chips .chip { font-size: 0.8rem; padding: 2px 8px; border: 1px solid var(--card-border); border-radius: 999px; color: var(--text-muted); }
 .sidebar-chips .chip:hover { border-color: var(--card-accent); color: var(--card-accent); text-decoration: none; }
 .sidebar-more { display: inline-block; margin-top: 10px; font-size: 0.85rem; }
+
+/* 反映待ちの記事の帯にある編集ボタン */
+.pending-edit { margin-left: 0.75rem; color: var(--link); white-space: nowrap; }
