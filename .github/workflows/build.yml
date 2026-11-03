@@ -1,0 +1,59 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # 記事は別リポジトリ（osu-denken/denken-articles）を posts/ に取り込む
+      - uses: actions/checkout@v4
+        with:
+          repository: osu-denken/denken-articles
+          path: posts
+          fetch-depth: 1
+          persist-credentials: false
+
+      # Hugo Modules の取り込みに Go が要る（版は go.mod の go 行に合わせる）
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache-dependency-path: go.sum
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.141.0"
+          extended: true
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: hugo-${{ hashFiles('assets/**', 'hugo.toml', 'go.sum') }}
+          restore-keys: hugo-
+
+      - run: hugo --minify --gc
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+
+      # 配信はまだ行わない。出力だけ残して、ビルドが通ったことを確かめる
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: public
+          retention-days: 7
