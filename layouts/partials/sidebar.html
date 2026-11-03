@@ -1,0 +1,68 @@
+<aside class="rightbar sidebar">
+  {{- /* 記事の目次は見出し（h2・h3）があるときだけ */}}
+  {{- if .IsPage }}
+  {{- $toc := .TableOfContents | replaceRE `</?nav[^>]*>` "" }}
+  {{- if findRE `<li` $toc }}
+  <section class="sidebar-card sidebar-toc">
+    <h2 class="sidebar-title">目次</h2>
+    {{ $toc | safeHTML }}
+  </section>
+  {{- end }}
+  {{- end }}
+
+  <section class="sidebar-card">
+    <p class="profile-name">{{ site.Params.author }}</p>
+    <p class="profile-bio">{{ site.Params.description }}</p>
+    <div class="profile-links">
+      {{- range site.Params.links }}
+      {{- if .url }}
+      <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}" title="{{ .name }}"><i class="{{ .icon }}" aria-hidden="true"></i></a>
+      {{- end }}
+      {{- end }}
+    </div>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">検索</h2>
+    <form class="search-box sidebar-search" action="{{ "search.html" | relURL }}" method="get" role="search">
+      <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+      <input type="search" name="q" class="search-input" aria-label="記事を検索" placeholder="記事を検索...">
+    </form>
+  </section>
+
+  {{- with site.Taxonomies.categories }}
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">カテゴリ</h2>
+    <ul class="sidebar-list">
+      {{- range .ByCount }}
+      <li>
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+        <span class="count">({{ .Count }})</span>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">タグ</h2>
+    <div class="sidebar-chips">
+      {{- range first 20 site.Taxonomies.tags.ByCount }}
+      <a class="chip" href="{{ "tags.html" | relURL }}#{{ .Name | urlize }}">#{{ .Page.Title }}</a>
+      {{- end }}
+    </div>
+    <a class="sidebar-more" href="{{ "tags.html" | relURL }}">すべてのタグ →</a>
+  </section>
+
+  <section class="sidebar-card">
+    <h2 class="sidebar-title">最近の記事</h2>
+    <ul class="sidebar-list">
+      {{- range first 5 (where site.RegularPages "Section" "posts") }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="count">{{ .Date.Format "2006-01-02" }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+</aside>

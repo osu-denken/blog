@@ -11,11 +11,8 @@
         {{ block "main" . }}{{ end }}
       </div>
     </main>
-    {{- if and .IsPage (not .Params.hide.rightbar) }}
-    {{- $toc := .TableOfContents | replaceRE `</?nav[^>]*>` "" }}
-    {{- if findRE `<li` $toc }}
-    <aside class="rightbar">{{ $toc | safeHTML }}</aside>
-    {{- end }}
+    {{- if not .Params.hide.rightbar }}
+    {{ partial "sidebar.html" . }}
     {{- end }}
   </div>
   {{ partial "footer.html" . }}

@@ -53,6 +53,20 @@ enableRobotsTXT = true
   headerTitle = "電研"
   author = "大阪産業大学 文化会 電子計算研究部"
 
+# サイドバーのリンク（URL が空なら出さない）
+[[params.links]]
+  name = "公式サイト"
+  url = "https://osu-denken.github.io/"
+  icon = "fa-solid fa-house"
+[[params.links]]
+  name = "GitHub"
+  url = "https://github.com/osu-denken"
+  icon = "fa-brands fa-github"
+[[params.links]]
+  name = "X"
+  url = "https://x.com/OSU_denken"
+  icon = "fa-brands fa-x-twitter"
+
 # 管理画面（gh-admin）の設定。記事リポジトリが決まるまで架空のリポジトリを指す
 [params.ghAdmin]
   repo = "owner/denken-test-articles"
