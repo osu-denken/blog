@@ -1,19 +1,15 @@
 {{- $meta := partialCached "external-meta.html" . .File.Path }}
-<article class="carditem{{ if $meta.image }} has-thumb{{ end }}">
-  {{- with $meta.image }}
-  <img class="card-thumb" src="{{ . }}" alt="" loading="lazy">
-  {{- end }}
+<article class="carditem">
   <div class="card-body">
-    <div class="card-meta">
-      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006.01.02" }}</time>
-      {{- with .Params.categories }}
-      <span class="card-category">{{ delimit . " / " }}</span>
+    <h2 class="card-title"><a href="{{ .RelPermalink }}">{{ $meta.title }}</a></h2>
+    <div class="card-main">
+      {{- with $meta.image }}
+      <img class="card-thumb" src="{{ . }}" alt="" loading="lazy">
+      {{- end }}
+      {{- with $meta.summary }}
+      <p class="card-excerpt">{{ . }}</p>
       {{- end }}
     </div>
-    <h2 class="card-title"><a href="{{ .RelPermalink }}">{{ $meta.title }}</a></h2>
-    {{- with $meta.summary }}
-    <p class="card-excerpt">{{ . }}</p>
-    {{- end }}
     {{- with .Params.tags }}
     <div class="card-tags">
       {{- range . }}
@@ -21,6 +17,12 @@
       {{- end }}
     </div>
     {{- end }}
+    <div class="card-foot">
+      {{- with .Params.categories }}
+      <span class="card-category">{{ delimit . " / " }}</span>
+      {{- end }}
+      <time class="card-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006.01.02" }}</time>
+    </div>
   </div>
   {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "card-edit" "label" "編集") }}
 </article>
