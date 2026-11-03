@@ -87,6 +87,7 @@ enableRobotsTXT = true
 
 # 管理画面（gh-admin）の設定。記事リポジトリが決まるまで架空のリポジトリを指す
 [params.ghAdmin]
+  author = "osu-denken"
   # 公式サイトのログイン（idToken）で GitHub のトークンを受け取る（static/js/gh-token.js）
   tokenProvider = "js/gh-token.js"
   repo = "osu-denken/denken-articles"
