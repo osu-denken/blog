@@ -1,4 +1,4 @@
-module github.com/kmmz532/denken-hugo-blog
+module github.com/osu-denken/blog
 
 go 1.27.3
 
