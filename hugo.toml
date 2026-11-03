@@ -73,9 +73,13 @@ enableRobotsTXT = true
   url = "https://github.com/osu-denken"
   icon = "fa-brands fa-github"
 [[params.links]]
-  name = "X"
+  name = "Twitter"
   url = "https://x.com/OSU_denken"
-  icon = "fa-brands fa-x-twitter"
+  icon = "fa-brands fa-twitter"
+[[params.links]]
+  name = "Instagram"
+  url = "https://www.instagram.com/osu_denken/"
+  icon = "fa-brands fa-instagram"
 
 # 管理画面（gh-admin）の設定。記事リポジトリが決まるまで架空のリポジトリを指す
 [params.ghAdmin]
