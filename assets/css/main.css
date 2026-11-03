@@ -33,3 +33,55 @@ body { margin: 0; font-family: sans-serif; color: var(--foreground); background:
 .post-title { font-size: 1.6rem; }
 .footer { max-width: 760px; margin: 24px auto; padding: 0 16px; color: var(--text-secondary); font-size: 0.85rem; }
 .pending-band { color: var(--text-secondary); font-size: 0.85rem; }
+
+/* 見出し・一覧 */
+.page-title { font-size: 1.4rem; margin: 24px 0 12px; }
+.contents { padding-top: 8px; padding-bottom: 32px; }
+.card-list { display: grid; gap: 0; }
+.carditem { padding-right: 40px; }
+.card-meta span + span::before { content: " / "; }
+
+/* 検索 */
+.search-box { margin: 12px 0; }
+.search-box input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--foreground);
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+#search-count { min-height: 1.4em; }
+
+/* タグ・カテゴリの一覧 */
+.term-list { list-style: none; padding: 0; }
+.term-list li { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.term-list a { color: var(--link); }
+
+/* ページ送り */
+.pager { display: flex; justify-content: space-between; gap: 12px; margin: 24px 0; }
+.pager a { color: var(--link); }
+
+/* ヘッダーとフッター */
+.header-actions a { color: var(--link); text-decoration: none; font-size: 0.9rem; }
+.footer-feeds { margin-left: 8px; }
+.footer-feeds a, .footer-admin { color: var(--link); }
+
+/* 記事の本文 */
+.post-body img { max-width: 100%; height: auto; }
+.post-body pre { overflow-x: auto; padding: 12px; background: rgba(127, 127, 127, 0.12); border-radius: 6px; }
+.post-body code { font-family: monospace; font-size: 0.9em; }
+.post-body table { border-collapse: collapse; max-width: 100%; display: block; overflow-x: auto; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 4px 8px; }
+.post-body a { color: var(--link); }
+.post-body blockquote { margin: 12px 0; padding-left: 12px; border-left: 3px solid var(--border); color: var(--text-secondary); }
+.post-title { margin-top: 16px; }
+.post-meta { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 16px; }
+
+/* 狭い画面 */
+@media (max-width: 480px) {
+  .header-inner { flex-wrap: wrap; gap: 8px; }
+  .post-title { font-size: 1.3rem; }
+}
