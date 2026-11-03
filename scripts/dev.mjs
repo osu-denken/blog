@@ -4,6 +4,7 @@
 // GH_ADMIN_DIR があれば、手元の hugo-gh-admin の作業コピーを使う（Hugo Modules の replace）。
 import { execFileSync, spawn } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
+import { rmSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -25,6 +26,9 @@ if (adminDir) {
   env.HUGO_MODULE_REPLACEMENTS = `github.com/kmmz532/hugo-gh-admin -> ${resolve(adminDir)}`;
   console.log(`GH_ADMIN_DIR: ${resolve(adminDir)} を使います。`);
 }
+
+// 前回の出力（public/）を消してから起動する。読み取り専用のままコピーされたファイルが残ると、次の起動でコピーに失敗する
+rmSync(resolve(root, 'public'), { recursive: true, force: true });
 
 const server = spawn(
   'hugo',
