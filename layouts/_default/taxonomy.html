@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+<ul class="term-list">
+  {{- range .Pages }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="card-meta">{{ len .Pages }} 件</span></li>
+  {{- end }}
+</ul>
+{{ end }}

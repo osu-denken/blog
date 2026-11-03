@@ -1,4 +1,5 @@
 <footer class="footer">
   <span>{{ site.Title }}</span>
+  <span class="footer-feeds"><a href="{{ "index.xml" | relURL }}">RSS</a> <a href="{{ "index.json" | relURL }}">JSON</a></span>
   {{ partial "gh-admin/button.html" (dict "kind" "footer" "page" .) }}
 </footer>

@@ -2,6 +2,9 @@
   <div class="header-inner">
     <a class="title" href="{{ "/" | relURL }}">{{ site.Params.headerTitle | default site.Title }}</a>
     <div class="header-actions">
+      <a class="icon-button" href="{{ "/search/" | relURL }}" aria-label="検索" title="検索">検索</a>
+      <a class="icon-button" href="{{ "/tags/" | relURL }}">タグ</a>
+      <a class="icon-button" href="{{ "/categories/" | relURL }}">カテゴリ</a>
       {{- if and (eq .Kind "page") (eq .Section "posts") }}
       {{ partial "gh-admin/button.html" (dict "kind" "edit" "page" . "class" "icon-button") }}
       {{- end }}

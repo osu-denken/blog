@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+{{- $pag := .Paginate .Pages }}
+<div class="card-list">
+  {{- range $pag.Pages }}
+    {{- partial "post-card.html" . }}
+  {{- else }}
+    <p>記事はまだありません。</p>
+  {{- end }}
+</div>
+{{ partial "pager.html" $pag }}
+{{ end }}
