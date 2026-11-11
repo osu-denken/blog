@@ -13,8 +13,8 @@
     {{- with .Params.tags }}
     <div class="card-tags">
       {{- range . }}
-      <a class="chip" href="{{ .Page.RelPermalink }}">#{{ .Page.Title }}</a>
-      <!-- <a class="chip" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a> -->
+      <!-- <a class="chip" href="{{ .Page.RelPermalink }}">#{{ .Page.Title }}</a> -->
+      <a class="chip" href="{{ "/blog/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
       {{- end }}
     </div>
     {{- end }}
