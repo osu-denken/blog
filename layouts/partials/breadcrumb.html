@@ -1,0 +1,26 @@
+{{- /* トップ以外のページで共通のパンくずを表示する */ -}}
+{{- if and (not .IsHome) (ne .Kind "404") }}
+<div class="status-bar">
+  <ul class="breadcrumb">
+    <li><a href="{{ site.Home.RelPermalink }}" title="Top">{{ site.Title }}</a></li>
+    {{- if .IsPage }}
+      {{- with .Params.categories }}
+        {{- range . }}
+    <li><a href="{{ printf "/categories/%s/" (. | urlize) | relURL }}">{{ . }}</a></li>
+        {{- end }}
+      {{- end }}
+    <li class="is-active">{{ .Title }}</li>
+    {{- else if eq .Kind "term" }}
+      {{- $taxonomy := .Data.Plural }}
+      {{- $label := cond (eq .Data.Singular "tag") "タグ" "カテゴリ" }}
+    <li><a href="{{ printf "/%s/" $taxonomy | relURL }}">{{ $label }}</a></li>
+    <li class="is-active">{{ .Title }}</li>
+    {{- else if eq .Kind "taxonomy" }}
+      {{- $label := cond (eq .Data.Singular "tag") "タグ" "カテゴリ" }}
+    <li class="is-active">{{ $label }}</li>
+    {{- else }}
+    <li class="is-active">{{ .Title }}</li>
+    {{- end }}
+  </ul>
+</div>
+{{- end }}

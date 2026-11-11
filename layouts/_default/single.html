@@ -1,11 +1,5 @@
 {{ define "main" }}
 <article class="post" data-slug="{{ .File.ContentBaseName }}">
-  <div class="status-bar">
-    <ul class="breadcrumb">
-      <li><a href="{{ site.Home.RelPermalink }}" title="Top">{{ site.Title }}</a></li>
-      <li class="is-active">{{ .Title }}</li>
-    </ul>
-  </div>
   {{- if not .Params.hide.title }}
   <h1 class="post-title">{{ .Title }}</h1>
   {{- end }}
@@ -30,6 +24,7 @@
     {{- end }}
   </div>
   {{- end }}
+  {{ partial "toc.html" (dict "page" . "variant" "mobile") }}
   <div class="post-body">{{ .Content }}</div>
 </article>
 {{ end }}
