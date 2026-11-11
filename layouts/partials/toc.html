@@ -1,0 +1,19 @@
+{{- /*
+  記事の目次を共通化する。
+  variant: mobile または sidebar
+*/ -}}
+{{- $page := .page -}}
+{{- $toc := $page.TableOfContents | replaceRE "</?nav[^>]*>" "" -}}
+{{- if findRE "<li" $toc }}
+  {{- if eq .variant "sidebar" }}
+<section class="sidebar-card sidebar-toc">
+  <h2 class="sidebar-title">目次</h2>
+  {{ $toc | safeHTML }}
+</section>
+  {{- else }}
+<details class="toc-mobile">
+  <summary>目次</summary>
+  {{ $toc | safeHTML }}
+</details>
+  {{- end }}
+{{- end }}
