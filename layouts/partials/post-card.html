@@ -13,7 +13,7 @@
     {{- with .Params.tags }}
     <div class="card-tags">
       {{- range . }}
-      <a class="chip" href="{{ "tags.html" | relURL }}#tag_{{ . | urlize }}">#{{ . }}</a>
+      <a class="chip" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>
       {{- end }}
     </div>
     {{- end }}
