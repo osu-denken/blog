@@ -1,13 +1,6 @@
-<aside class="sidebar">
-  {{- /* 記事の目次は見出し（h2・h3）があるときだけ */}}
+ <aside class="sidebar">
   {{- if .IsPage }}
-  {{- $toc := .TableOfContents | replaceRE `</?nav[^>]*>` "" }}
-  {{- if findRE `<li` $toc }}
-  <section class="sidebar-card sidebar-toc">
-    <h2 class="sidebar-title">目次</h2>
-    {{ $toc | safeHTML }}
-  </section>
-  {{- end }}
+  {{ partial "toc.html" (dict "page" . "variant" "sidebar") }}
   {{- end }}
 
   <section class="sidebar-card">
