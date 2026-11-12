@@ -13,7 +13,7 @@
     {{- else if eq .Kind "term" }}
       {{- $taxonomy := .Data.Plural }}
       {{- $label := cond (eq .Data.Singular "tag") "タグ" "カテゴリ" }}
-    <li><a href="{{ printf "/%s/" $taxonomy | relURL }}">{{ $label }}</a></li>
+    <li><a href="{{ printf "/blog/%s/" $taxonomy | relURL }}">{{ $label }}</a></li>
     <li class="is-active">{{ .Title }}</li>
     {{- else if eq .Kind "taxonomy" }}
       {{- $label := cond (eq .Data.Singular "tag") "タグ" "カテゴリ" }}
