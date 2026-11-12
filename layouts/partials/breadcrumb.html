@@ -6,7 +6,7 @@
     {{- if .IsPage }}
       {{- with .Params.categories }}
         {{- range . }}
-    <li><a href="{{ printf "/categories/%s/" (. | urlize) | relURL }}">{{ . }}</a></li>
+    <li><a href="{{ printf "/blog/categories/%s/" (. | urlize) | relURL }}">{{ . }}</a></li>
         {{- end }}
       {{- end }}
     <li class="is-active">{{ .Title }}</li>
