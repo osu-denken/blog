@@ -157,3 +157,9 @@ ul.cardlist, .search-results { display: grid; grid-template-columns: repeat(2, m
 .card-body { padding: 0; }
 .private-edit { margin-left: 0.75rem; color: var(--link); white-space: nowrap; }
 .card-external { margin-left: 0.5rem; color: var(--text-muted); font-size: 0.8rem; font-weight: normal; }
+
+/* アーカイブ */
+.archive-year { margin-top: 2rem; font-size: 1.4rem; font-weight: 600; color: var(--heading); }
+.archive-count { color: var(--text-secondary); font-size: 0.9rem; font-weight: normal; }
+.archive-list { list-style: none; margin: 0.5rem 0 0; padding: 0; display: grid; gap: 0.4rem; }
+.archive-list time { color: var(--text-secondary); margin-right: 0.75rem; font-variant-numeric: tabular-nums; }
