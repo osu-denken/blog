@@ -4,10 +4,14 @@
 
 ## 構成
 
-- `hugo.toml`: 設定と、部品（`hugo-gh-admin`・`hugo-shortcodes`）の取り込み
-- `layouts/`: テーマ（画面の形）
+- `hugo.toml`: 設定と、[Blogit](https://github.com/kmmz532/blogit) のテーマ（`themes/base`）の取り込み。管理画面（`hugo-gh-admin`）と `hugo-shortcodes` も、テーマ経由で取り込む。版は固定せず、ビルドのたびに最新を利用する
+- `layouts/`: 電研ブログの見た目（トップページのグリッド、ヘッダー、フッター、記事ページなど）。テーマの同じパスのファイルを上書きする。サイドバー・アーカイブ・目次などは、テーマのものを使う
 - `assets/`・`static/js/denken/`・`static/lib/`: スタイルと、ブラウザで動く JS
 - `posts/`: 記事リポジトリ（`osu-denken/denken-articles`）を clone する場所。Git の対象外
+
+## 管理画面のログイン
+
+公式サイトにログインしていれば、そのトークン（`static/js/gh-token.js`）で管理画面を使える。ログインしていない場合は、ログイン画面の「GitHubでログイン」（BlogitのOAuth Appを共用する）か、トークンの入力でログインする。
 
 ## 手元で動かす
 
