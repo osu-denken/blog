@@ -4,7 +4,7 @@
 
 ## 構成
 
-- `hugo.toml`: 設定と、[Blogit](https://github.com/kmmz532/blogit) のテーマ（`themes/base`）の取り込み。管理画面（`hugo-gh-admin`）と `hugo-shortcodes` も、テーマ経由で取り込む。版は固定せず、ビルドのたびに最新を利用する
+- `hugo.toml`: 設定と、[Blogit](https://github.com/kmmz532/blogit) のテーマ（`themes/base`）の取り込み。管理画面（`hugo-gh-admin`）と `hugo-shortcodes` も、テーマ経由で取り込む。バージョンは固定せず、ビルドのたびに最新を利用する
 - `layouts/`: 電研ブログの見た目（トップページのグリッド、ヘッダー、フッター、記事ページなど）。テーマの同じパスのファイルを上書きする。サイドバー・アーカイブ・目次などは、テーマのものを使う
 - `assets/`・`static/js/denken/`・`static/lib/`: スタイルと、ブラウザで動く JS
 - `posts/`: 記事リポジトリ（`osu-denken/denken-articles`）を clone する場所。Git の対象外
