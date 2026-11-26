@@ -95,6 +95,8 @@ enableRobotsTXT = true
 
 # 管理画面（gh-admin）の設定。記事リポジトリが決まるまで架空のリポジトリを指す
 [params.ghAdmin]
+  # サイト設定の「バージョン」タブの「最新の版で再ビルド」。ビルドは本体リポジトリ（siteRepo）で行う
+  buildWorkflow = "build.yml"
   # 管理画面の「GitHubでログイン」（Blogit の OAuth App と認証用 Worker を利用する）
   oauthClientID = "Ov23liHRAqWTpiQTTKjW"
   oauthTokenURL = "https://blogit-auth.kmmz1127.workers.dev/github/token"
