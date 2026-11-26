@@ -1,6 +1,8 @@
 title = "電研ブログ"
 baseURL = "https://osu-denken.net/blog/"
 languageCode = "ja"
+# 未設定だと en 扱いになり、テーマの文言が英語になる
+defaultContentLanguage = "ja"
 timeZone = "Asia/Tokyo"
 timeout = "5m"
 enableRobotsTXT = true
@@ -58,7 +60,11 @@ enableRobotsTXT = true
 
 [params]
   description = "大阪産業大学 文化会 電子計算研究部の公式ブログ。活動報告や制作物、部員による発信をしています。"
+  # サイドバーのプロフィール文
+  bio = "大阪産業大学 文化会 電子計算研究部の公式ブログ。活動報告や制作物、部員による発信をしています。"
   headerTitle = "電研"
+  # 日付の表示形式（サイドバーなど、テーマの部品で使う）
+  dateFormat = "2006-01-02"
   # 公式サイト（ログインのトークンは、このサイトと同じ origin に保存される）
   officialURL = "https://osu-denken.net/"
   author = "電子計算研究部"
@@ -97,6 +103,9 @@ enableRobotsTXT = true
   repo = "osu-denken/denken-articles"
   postURL = "/{yyyy}/{mm}/{dd}/{name}.html"
   branch = "main"
+  # サイト設定（/admin/settings/）の書き込み先。本体リポジトリ
+  siteRepo = "osu-denken/blog"
+  siteBranch = "main"
 
 # 記事と画像は記事リポジトリ（osu-denken/denken-articles）を posts/ に clone して取り込む
 [[module.mounts]]
@@ -112,8 +121,7 @@ enableRobotsTXT = true
   source = "posts/static"
   target = "static"
 
+# サイドバー・アーカイブ・目次などの部品は Blogit のテーマから取り込む（hugo-gh-admin と hugo-shortcodes もテーマ経由で取り込む）。
+# 見た目（CSS・トップページのグリッド・ヘッダー・フッター）はこのリポジトリの layouts と assets で上書きする
 [[module.imports]]
-  path = "github.com/kmmz532/hugo-gh-admin"
-
-[[module.imports]]
-  path = "github.com/kmmz532/hugo-shortcodes"
+  path = "github.com/kmmz532/blogit/themes/base"
